@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Library</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #1d3263, #442063, #1f2d51, #342557, #2b233c);
+      background-size: 400% 400%;
+      background-attachment: fixed;
+      color: #f9fafb;
+      display: flex;
+    }
+
+    .sidebar {
+      width: 220px;
+      height: 100vh;
+      background-color: #1f2d51;
+      padding: 20px;
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid #334155;
+    }
+
+    .sidebar h2 {
+      color: #60a5fa;
+      margin-bottom: 40px;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: #cbd5e1;
+      margin: 10px 0;
+      font-weight: 500;
+      transition: color 0.3s, font-weight 0.3s;
+    }
+
+    .sidebar a.active {
+      color: #ffffff;
+      font-weight: 700;
+      text-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
+    }
+
+    .main {
+      margin-left: 260px;
+      padding: 40px;
+      flex: 1;
+      background: transparent;
+    }
+
+    .library-entry {
+      background-color: #334155;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .library-entry h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #facc15;
+    }
+
+    .library-entry p {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #e2e8f0;
+    }
+
+    .library-entry .rating {
+      font-size: 16px;
+      color: #fbbf24;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 10px 16px;
+      background-color: #1d4ed8;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>BookBase</h2>
+    <a href="index.html">Discover</a>
+    <a href="#">Category</a>
+    <a href="my-library.html" class="active">My Library</a>
+    <a href="#">Download</a>
+    <a href="#">Audio Books</a>
+    <a href="#">Favourite</a>
+    <a href="#">Settings</a>
+    <a href="#">Support</a>
+    <a href="#">Logout</a>
+  </div>
+
+  <div class="main">
+    <a href="index.html" class="back-button">← Volver a Inicio</a>
+    <h1>Mis Libros Leídos</h1>
+
+    <div class="library-entry">
+      <h3>Book Title 1</h3>
+      <p><strong>Inicio:</strong> 01/05/2025</p>
+      <p><strong>Fin:</strong> 10/05/2025</p>
+      <p class="rating">★ ★ ★ ★ ☆</p>
+      <p><strong>Reseña:</strong> Excelente narrativa y personajes bien construidos.</p>
+    </div>
+
+    <div class="library-entry">
+      <h3>Book Title 2</h3>
+      <p><strong>Inicio:</strong> 15/04/2025</p>
+      <p><strong>Fin:</strong> 25/04/2025</p>
+      <p class="rating">★ ★ ★ ☆ ☆</p>
+      <p><strong>Reseña:</strong> Interesante pero con ritmo lento en algunas partes.</p>
+    </div>
+  </div>
+</body>
+</html>
