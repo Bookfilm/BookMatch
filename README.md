@@ -1,3 +1,4 @@
-Esta es una página web (proximamente APP) donde cada usuario podrá subir los datos de cada libro que tenga (en físico) y a su vez podrá seleccionar otros libros de otros usuarios y pretender hacer match para obtener el prestamo del mismno, lo cual concertará una cita para entregar el libro.
-archivo de prueba
-Cambio inicial por Juan del equipo Rojo
+Esta es uan página web (proximamente APP) donde cada usuario podrá subir los datos de cada libro que tenga (en físico) y a su vez podrá seleccionar otros libros de otros usuarios y pretender hacer match para obtener el prestamo del mismno, lo cual concertará una cita para entregar el libro.
+archio de prueba
+Mi contribución,Sole,sobre la misma linea.
+
