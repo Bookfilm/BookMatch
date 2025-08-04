@@ -2,4 +2,4 @@ Esta es uan página web (proximamente APP) donde cada usuario podrá subir los d
 archio de prueba
 Cambio inicial por Juan del equipo Rojo
 Mi contribución, Yohana del grupo22, sobre la misma línea
-Esta es del ejercicio de conflicto.Claudia
+Esta es del ejercicio de conflicto.Claudia 2
