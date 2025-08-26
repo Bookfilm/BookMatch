@@ -1,0 +1,1 @@
+Esta es uan página web (proximamente APP) donde cada usuario registrará sus datos, contraseña y podrá subir los datos de cada libro que tenga (en físico) creando un registro personal y a su vez podrá seleccionar otros libros de otros usuarios y pretender hacer "match" para obtener un prestamo, lo cual concertará una cita para entregar el libro.
