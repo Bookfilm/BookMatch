@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 # Bienvenido a la Wiki del proyecto “BookMatch”
 
 Donde haremos un registro de todas las actividades, documentación, políticas de seguridad, ciberseguridad,  y tareas por realizar y las que se vayan corroborando para los partícipes del grupo y profesores.
