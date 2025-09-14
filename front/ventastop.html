@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="ventastop.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <!-- Botón hamburguesa solo visible en móvil -->
+  <button class="hamburger" id="hamburger-btn" aria-label="Abrir menú">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <img src="images/logo.png" alt="logo" />
+      <h2>BookMatch</h2>
+    </div>
+    <ul class="sidebar-links">
+      <h4>
+        <span>Menu</span>
+        <div class="menu-separator"></div>
+      </h4>
+      <li>
+        <a href="index.html">
+          <span class="material-symbols-outlined"> dashboard </span>Home</a>
+      </li>
+      <li>
+        <a href="#"><span class="material-symbols-outlined"> book </span>Nuevos</a>
+      </li>
+      <li>
+        <a href="#"><span class="material-symbols-outlined"> monitoring </span>Los más vendidos</a>
+      </li>
+      <h4>
+        <span>General</span>
+        <div class="menu-separator"></div>
+      </h4>
+      <li>
+        <a href="#"><span class="material-symbols-outlined"> folder </span>Catálogo</a>
+      </li>
+      <li>
+        <a href="#"><span class="material-symbols-outlined"> box</span>Envíos</a>
+      </li>
+      <li>
+        <a href="#"><span class="material-symbols-outlined"> move </span>Donaciones</a>
+      </li>
+      <li>
+        <a href="#"><span class="material-symbols-outlined"> message </span>Comentarios</a>
+      </li>
+      <li>
+        <a href="#"><span class="material-symbols-outlined">
+            notifications_active </span>Notificatios</a>
+      </li>
+      <h4>
+        <span>Nosotros</span>
+        <div class="menu-separator"></div>
+      </h4>
+      <li>
+        <a href="#"><span class="material-symbols-outlined"> account_circle </span>Profile</a>
+      </li>
+      <li>
+        <a href="#"><span class="material-symbols-outlined"> settings </span>Settings</a>
+      </li>
+      <li>
+        <a href="#"><span class="material-symbols-outlined"> logout </span>Logout</a>
+      </li>
+    </ul>
+    <div class="user-account">
+      <div class="user-profile">
+        <img src="images/profile-img.jpg" alt="Profile Image" />
+        <div class="user-detail">
+          <h3>Eva Murphy</h3>
+          <span>Web Developer</span>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <main class="main-content">
+    <!-- Aquí va todo tu contenido principal -->
+    <h2>TOP 20 LOS MÁS VENDIDOS DEL 2025</h2>
+    <Hr></Hr>
+  <div class="galeria">
+    <div class="libro-container">
+      <div class="libro">
+        <img src="img/portadas/archipielago.jpg" alt="Libro 1">
+      </div>
+      <div class="info">
+        <h3>Archipiélago</h3>
+        <p>Mariana Enriquez</p>
+        <p>Precio: $10.000</p>
+        <button>Comprar</button>
+      </div>
+    </div>
+    <div class="libro-container">
+      <div class="libro">
+        <img src="img/portadas/comodesaparecercompletamente.jpeg" alt="Libro 2">
+      </div>
+      <div class="info">
+        <h3>Cómo desaparecer completamente</h3>
+        <p>Mariana Enriquez</p>
+        <p>Precio: $10.000</p>
+        <button>Comprar</button>
+      </div>
+    </div>
+    <div class="libro-container">
+      <div class="libro">
+        <img src="img/portadas/elbuenmal.jpg" alt="libro 3">
+      </div>
+      <div class="info">
+        <h3>El buen mal</h3>
+        <p>Samantha Schweblin </p>
+        <p>Precio: $10.000</p>
+        <button>Comprar</button>
+      </div>
+    </div>
+    <div class="libro-container">
+      <div class="libro">
+        <img src="img/portadas/lafelicidad.jpg" alt="Libro 4">
+      </div>
+      <div class="info">
+        <h3>La Felicidad</h3>
+        <p>Gabriel Rolón</p>
+        <p>Precio: $10.000</p>
+        <button>Comprar</button>
+      </div>
+    </div>
+    <div class="libro-container">
+      <div class="libro">
+        <img src="img/portadas/lamuerteajena.jpg" alt="Libro 5">
+      </div>
+      <div class="info">
+        <h3>La muerte ajena</h3>
+        <p>Claudia Piñeiro</p>
+        <p>Precio: $10.000</p>
+        <button>Comprar</button>
+      </div>
+    </div>
+    <div class="libro-container">
+      <div class="libro">
+        <img src="img/portadas/lapacientesilenciosa.jpg" alt="Libro 6">
+      </div>
+      <div class="info">
+        <h3>La Paciente Silenciosa</h3>
+        <p>Alex Michaelides</p>
+        <p>Precio: $10.000</p>
+        <button>Comprar</button>
+      </div>
+    </div>
+    <div class="libro-container">
+      <div class="libro">
+        <img src="img/portadas/linaymandarina.jpg" alt="Libro 7">
+      </div>
+      <div class="info">
+        <h3>Lyna y Mandarina</h3>
+        <p>Lyna Vallejos</p>
+        <p>Precio: $10.000</p>
+        <button>Comprar</button>
+      </div>
+    </div>
+    <div class="libro-container">
+      <div class="libro">
+        <img src="img/portadas/minombreesemilidelvalle.jpg" alt="Libro 8">
+      </div>
+      <div class="info">
+        <h3>Mi Nombre es Emilia del Valle</h3>
+        <p>Isabel Allende</p>
+        <p>Precio: $10.000</p>
+        <button>Comprar</button>
+      </div>
+    </div> 
+    <div class="libro-container">
+      <div class="libro">
+        <img src="img/portadas/misionenparis.jpg" alt="Libro 9">
+      </div>
+      <div class="info">
+        <h3>Misión en París</h3>
+        <p>Arturo Pérez-Reverte</p>
+        <p>Precio: $10.000</p>
+        <button>Comprar</button>
+      </div>
+    </div> 
+    <div class="libro-container">
+      <div class="libro">
+        <img src="img/portadas/rengoyeta.jpg" alt="Libro 10">
+      </div>
+      <div class="info">
+        <h3>Rengo Yeta</h3>
+        <p>Cesár González</p>
+        <p>Precio: $10.000</p>
+        <button>Comprar</button>
+      </div>
+    </div> 
+    <div class="libro-container">
+      <div class="libro">
+        <img src="img/portadas/losnuevos.webp" alt="Libro 11">
+      </div>
+      <div class="info">
+        <h3>Los Nuevos</h3>
+        <p>Pedro Mairal</p>
+        <p>Precio: $10.000</p>
+        <button>Comprar</button>
+      </div>
+    </div> 
+    <div class="libro-container">
+      <div class="libro">
+        <img src="img/portadas/topos.jpg" alt="Libro 12">
+      </div>
+      <div class="info">
+        <h3>Topos</h3>
+        <p>Alconada Mon, Hugo</p>
+        <p>Precio: $10.000</p>
+        <button>Comprar</button>
+      </div>
+    </div> 
+    <div class="libro-container">
+      <div class="libro">
+        <img src="img/portadas/perreo.jpg" alt="Libro 13">
+      </div>
+      <div class="info">
+        <h3>Perreo</h3>
+        <p>Cazzu</p>
+        <p>Precio: $10.000</p>
+        <button>Comprar</button>
+      </div>
+    </div>
+     <div class="libro-container">
+      <div class="libro">
+        <img src="img/portadas/habitosatomicos.jpg" alt="Libro 14">
+      </div>
+      <div class="info">
+        <h3>Habitos Atomicos</h3>
+        <p>Clear, James</p>
+        <p>Precio: $10.000</p>
+        <button>Comprar</button>
+      </div>
+    </div> 
+    <div class="libro-container">
+      <div class="libro">
+        <img src="img/portadas/elninoresentido.jpg" alt="Libro 15">
+      </div>
+      <div class="info">
+        <h3>El Nino Resentido</h3>
+        <p>César Gónzales</p>
+        <p>Precio: $10.000</p>
+        <button>Comprar</button>
+      </div
+    </div> 
+    <div class="libro-container">
+      <div class="libro">
+        <img src="img/portadas/estedolornoesmio.jpg" alt="Libro 16">
+      </div>
+      <div class="info">
+        <h3>Este Dolor No Es Mío</h3>
+        <p>Wolynn Mark</p>
+        <p>Precio: $10.000</p>
+        <button>Comprar</button>
+      </div>
+    </div> 
+    <div class="libro-container">
+      <div class="libro">
+        <img src="img/portadas/loscuatroacuerdo.jpg" alt="Libro 17">
+      </div>
+      <div class="info">
+        <h3>Los Cuatro Acuerdos</h3>
+        <p>Dr Miguel Ruiz</p>
+        <p>Precio: $10.000</p>
+        <button>Comprar</button>
+      </div>
+    </div> 
+    <div class="libro-container">
+      <div class="libro">
+        <img src="img/portadas/dejadesertu.jpg" alt="Libro 18">
+      </div>
+      <div class="info">
+        <h3>Deja De Ser Tú</h3>
+        <p>Joe Dispenza</p>
+        <p>Precio: $10.000</p>
+        <button>Comprar</button>
+      </div>
+    </div> 
+    <div class="libro-container">
+      <div class="libro">
+        <img src="img/portadas/diariodepilarenmexico.jpg" alt="Libro 19">
+      </div>
+      <div class="info">
+        <h3>El Diario De Pilar En Mexico</h3>
+        <p>Flavia Lins E Silva</p>
+        <p>Precio: $10.000</p>
+        <button>Comprar</button>
+      </div>
+    </div>
+    <div class="libro-container">
+      <div class="libro">
+        <img src="img/portadas/mipsicologamedijo.png" alt="Libro 20">
+      </div>
+      <div class="info">
+        <h3>Mi Psicologa Me Dijo</h3>
+        <p> Katerine Hoyer, Yulibet R.G</p>
+        <p>Precio: $10.000</p>
+        <button>Comprar</button>
+      </div>
+    </div>
+  </div>
+  </main>
+  <!-- footer starts from here-->
+<footer class="footer">
+<div class="container bottom_border">
+<div class="row">
+<div class=" col-sm-4 col-md col-sm-4  col-12 col">
+<h5 class="headin5_amrc col_white_amrc pt2">Find us</h5>
+<!--headin5_amrc-->
+<p class="mb10">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+<p><i class="fa fa-location-arrow"></i> 9878/25 sec 9 rohini 35 </p>
+<p><i class="fa fa-phone"></i>  +91-9999878398  </p>
+<p><i class="fa fa fa-envelope"></i> info@example.com  </p>
+</div>
+
+<div class="container">
+<ul class="foote_bottom_ul_amrc">
+<li><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">Pricing</a></li>
+<li><a href="#">Blog</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+<p class="text-center">Copyright @2025 | Designed With by <a href="#">BookFilm</a></p>
+<ul class="social_footer_ul">
+<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+<li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+</ul>
+</div>
+</footer>
+<script>
+  const hamburger = document.getElementById('hamburger-btn');
+  const sidebar = document.querySelector('.sidebar');
+  hamburger.addEventListener('click', () => {
+    sidebar.classList.toggle('open');
+    document.body.classList.toggle('menu-open', sidebar.classList.contains('open'));
+  });
+  document.addEventListener('click', (e) => {
+    if (
+      sidebar.classList.contains('open') &&
+      !sidebar.contains(e.target) &&
+      e.target !== hamburger
+    ) {
+      sidebar.classList.remove('open');
+      document.body.classList.remove('menu-open');
+    }
+  });
+</script>
+</html>
