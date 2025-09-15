@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botón Contacto</title>
+    <link rel="stylesheet" href="contacto.css"> 
+</head>
+<body>
+    <div class="contacto-button">
+        Contacto
+    </div><form class="contacto-form">
+    <label for="asunto">Asunto</label>
+    <select id="asunto" name="asunto">
+        <option value="">Elige una opción</option>
+        <option value="consulta">Consulta general</option>
+        <option value="pedido">Problema con pedido</option>
+    
+    </select>
+
+    <label for="nombre">Nombre y apellido</label>
+    <input type="text" id="nombre" name="nombre" placeholder="">
+
+    <label for="email">Tu correo electrónico</label>
+    <input type="email" id="email" name="email" placeholder="">
+
+    <label for="orden">Número de orden (Importante: es indispensable que indiques correctamente el número de la orden que recibiste por correo electrónico luego de hacer el pedido)</label>
+    <input type="text" id="orden" name="orden" placeholder="">
+
+    <label for="mensaje">Tu mensaje (opcional)</label>
+    <textarea id="mensaje" name="mensaje" placeholder=""></textarea>
+
+    <button type="submit" class="enviar-button">ENVIAR</button>
+</form>
+<div class="info-box">
+    <p>Domicilio de BOOKFILM</p>
+    <p>BOOKFILM</p>
+    <p>Avenida SIEMPREVIVAS 1316</p>
+    <p>C1043ABN CORDOBA | Argentina</p>
+    <p>CUIT N°: 30-12314521-0</p>
+    <p>Guía de compra y venta </p>
+</div>
+</body>
+</html>
