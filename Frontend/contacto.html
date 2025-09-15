@@ -1,44 +1,174 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Botón Contacto</title>
-    <link rel="stylesheet" href="contacto.css"> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Contacta con BookMatch para cualquier consulta sobre tus compras, envíos o para resolver tus dudas.">
+  <title>Contacto - BookMatch</title>
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/contacto.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-    <div class="contacto-button">
-        Contacto
-    </div><form class="contacto-form">
-    <label for="asunto">Asunto</label>
-    <select id="asunto" name="asunto">
-        <option value="">Elige una opción</option>
-        <option value="consulta">Consulta general</option>
-        <option value="pedido">Problema con pedido</option>
-    
-    </select>
+  <header class="mobile-header">
+    <h1 class="mobile-title">BookMatch</h1>
+  </header>
+  <button class="hamburger" id="hamburger-btn" aria-label="Abrir menú" aria-controls="sidebar-menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <aside class="sidebar" id="sidebar-menu" role="navigation">
+    <div class="sidebar-header">
+      <img src="img/logoblanco.png" alt="Logo de BookMatch" />
+      <h2>BookMatch</h2>
+    </div>
+    <ul class="sidebar-links">
+      <h4><span>Menu</span><div class="menu-separator"></div></h4>
+      <li><a href="index.html"><span class="material-symbols-outlined">dashboard</span>Home</a></li>
+      <li><a href="#"><span class="material-symbols-outlined">book</span>Nuevos</a></li>
+      <li><a href="ventastop.html"><span class="material-symbols-outlined">monitoring</span>Los más vendidos</a></li>
+      <h4><span>General</span><div class="menu-separator"></div></h4>
+      <li><a href="#"><span class="material-symbols-outlined">folder</span>Catálogo</a></li>
+      <li><a href="#"><span class="material-symbols-outlined">box</span>Envíos</a></li>
+      <li><a href="#"><span class="material-symbols-outlined">move</span>Donaciones</a></li>
+      <li><a href="contacto.html"><span class="material-symbols-outlined">message</span>Contacto</a></li>
+      <li><a href="#"><span class="material-symbols-outlined">notifications_active</span>Notificaciones</a></li>
+      <h4><span>Nosotros</span><div class="menu-separator"></div></h4>
+      <li><a href="#"><span class="material-symbols-outlined">account_circle</span>Profile</a></li>
+      <li><a href="#"><span class="material-symbols-outlined">settings</span>Settings</a></li>
+      <li><a href="#"><span class="material-symbols-outlined">logout</span>Logout</a></li>
+    </ul>
+  </aside>
 
-    <label for="nombre">Nombre y apellido</label>
-    <input type="text" id="nombre" name="nombre" placeholder="">
+  <main class="main-content">
+    <section class="contact-page">
+      <div class="contact-header">
+        <h1>Centro de Ayuda y Contacto</h1>
+        <p>¿Tienes alguna duda? Estamos aquí para ayudarte.</p>
+      </div>
 
-    <label for="email">Tu correo electrónico</label>
-    <input type="email" id="email" name="email" placeholder="">
+      <div class="botones-indice">
+        <a href="#medios-envio" class="boton-indice">
+          <i class="fa-solid fa-truck"></i>
+        </a>
+        <a href="#medios-pago" class="boton-indice">
+          <i class="fa-solid fa-credit-card"></i>
+        </a>
+        <a href="#faq" class="boton-indice">
+          <i class="fa-solid fa-comments"></i>
+        </a>
+      </div>
 
-    <label for="orden">Número de orden (Importante: es indispensable que indiques correctamente el número de la orden que recibiste por correo electrónico luego de hacer el pedido)</label>
-    <input type="text" id="orden" name="orden" placeholder="">
+      <div class="contact-form-wrapper">
+        <h2>Envíanos un mensaje</h2>
+        <form class="contacto-form">
+          <label for="asunto">Asunto</label>
+          <select id="asunto" name="asunto" required>
+            <option value="">Elige una opción</option>
+            <option value="consulta">Consulta general</option>
+            <option value="pedido">Problema con un pedido</option>
+            <option value="venta">Dudas sobre vender</option>
+          </select>
 
-    <label for="mensaje">Tu mensaje (opcional)</label>
-    <textarea id="mensaje" name="mensaje" placeholder=""></textarea>
+          <label for="nombre">Nombre y apellido</label>
+          <input type="text" id="nombre" name="nombre" required>
 
-    <button type="submit" class="enviar-button">ENVIAR</button>
-</form>
-<div class="info-box">
-    <p>Domicilio de BOOKFILM</p>
-    <p>BOOKFILM</p>
-    <p>Avenida SIEMPREVIVAS 1316</p>
-    <p>C1043ABN CORDOBA | Argentina</p>
-    <p>CUIT N°: 30-12314521-0</p>
-    <p>Guía de compra y venta </p>
-</div>
+          <label for="email">Tu correo electrónico</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="orden">Número de orden (opcional)</label>
+          <input type="text" id="orden" name="orden" placeholder="Ej: #12345">
+
+          <label for="mensaje">Tu mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+          <button type="submit" class="enviar-button">Enviar Mensaje</button>
+        </form>
+      </div>
+
+      <div class="info-adicional-container">
+        <div class="bloque">
+          <h3>Costos de envío</h3>
+          <p>Para compras iguales o superiores a AR$39.000, no se cobran gastos de envío (solo en la Argentina). Enviamos tu compra por <strong>Correo Argentino</strong>, <strong>Urbano</strong> o <strong>Andreani</strong> para envíos nacionales y por <strong>DHL</strong> para compras internacionales.</p>
+        </div>
+
+        <div class="bloque">
+          <h3>Contacto Directo</h3>
+          <p>Para consultas por compras en proceso o sobre cómo comprar, contáctanos al <strong>(54) 351 5237 112</strong> de lunes a viernes de 9:00 a 19:00 (hora argentina, -0300 UTC) o a <strong>ventas@bookmatch.com</strong> (indicando tu número de compra).</p>
+        </div>
+      </div>
+
+      <section id="medios-envio" class="medios-envio">
+        <h2 class="titulo-seccion">Medios de envío</h2>
+        <div class="opciones">
+          <div class="opcion"><i class="fa-solid fa-truck"></i><h3>Envío a domicilio</h3><p>Recibí tus libros en la puerta de tu casa.</p></div>
+          <div class="opcion"><i class="fa-solid fa-motorcycle"></i><h3>Envío exprés</h3><p>Servicio de moto dentro del anillo de circunvalación.</p></div>
+          <div class="opcion"><i class="fa-solid fa-building"></i><h3>Envíos Nacionales</h3><p>Los envíos se realizan desde la Argentina.</p></div>
+        </div>
+      </section>
+
+      <section id="medios-pago" class="medios-pago-section">
+        <h2 class="titulo-seccion">Medios de Pago</h2>
+        <div class="bloque">
+          <h3>¿Cuáles son las formas de pago habilitadas?</h3>
+          <p>Para compras dentro de la Argentina, las formas de pago son:</p>
+          <ul>
+            <li>Depósito o transferencia en nuestra cuenta bancaria.</li>
+            <li>Tarjetas de crédito: Visa, Mastercard y American Express.</li>
+            <li>MercadoPago</li>
+            <li>Mobbex</li>
+            <li>RapiPago o Pago Fácil.</li>
+          </ul>
+          <div class="seguridad">
+            <h3>¿Es seguro usar tarjeta de crédito?</h3>
+            <p>Sí, la seguridad está garantizada por el uso de los protocolos <strong>Secure HTTP</strong> y <strong>Secure Sockets Layer (SSL)</strong>. Utilizamos el sistema de Pago Seguro de Mobbex y MercadoPago para operar con las principales tarjetas, cumpliendo con los estándares internacionales y locales.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="medios-envio">
+        <h2 class="titulo-seccion">Compra Online</h2>
+        <div class="opciones">
+          <div class="opcion">
+            <a href="#" class="faq-link"><i class="fa-solid fa-comments"></i><h3>Preguntas Frecuentes</h3></a>
+          </div>
+        </div>
+      </section>
+
+    </section>
+  </main>
+  
+  <!-- Incluir el mismo footer que en las otras páginas -->
+  <footer class="footer">
+    <div class="container">
+      <div class="bottom_border">
+        <div class="row">
+          <div class="col">
+            <h5>Find us</h5>
+            <p>BookMatch no es solo una librería virtual, sino un espacio para celebrar y promover la pasión por la lectura en el mundo digital.</p>
+            <p><i class="fa fa-location-arrow"></i> Córdoba, Argentina</p>
+            <p><i class="fa fa-envelope"></i> <a href="#" style="color: #CCC; text-decoration: none;">RRHHBookMatch@gmail.com</a></p>
+            <p><i class="fa-brands fa-github"></i> <a href="https://github.com/Bookfilm/BookMatch" target="_blank" rel="noopener noreferrer" style="color: #CCC; text-decoration: none;">Bookfilm/BookMatch</a></p>
+          </div>
+        </div>
+      </div>
+      <ul class="foote_bottom_ul_amrc">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">Nosotros</a></li>
+        <li><a href="mediosdepago.html">Pagos</a></li>
+        <li><a href="ventastop.html">Más Vendidos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+      <p class="text-center">Copyright @2025 | Designed by <a href="https://github.com/Bookfilm" target="_blank" rel="noopener noreferrer">BookMatch Team</a></p>
+      <ul class="social_footer_ul">
+        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+      </ul>
+    </div>
+  </footer>
+  
+  <script src="Ventastop.js"></script>
 </body>
 </html>
