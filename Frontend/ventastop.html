@@ -1,21 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="ventastop.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/ventastop.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Descubre los libros más vendidos del 2025 en BookMatch. Compra tus próximos libros favoritos.">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <title>Libros más vendidos del 2025 - BookMatch</title>
 </head>
 <body>
-  <!-- Botón hamburguesa solo visible en móvil -->
-  <button class="hamburger" id="hamburger-btn" aria-label="Abrir menú">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-  <aside class="sidebar">
+  <header class="mobile-header">
+    <h1 class="mobile-title">BookMatch</h1>
+  </header>
+  <button class="hamburger" id="hamburger-btn" aria-label="Abrir menú" aria-controls="sidebar-menu" aria-expanded="false"
+    aria-haspopup="true">
+    <span></span><span></span><span></span>
+  </button>  <aside class="sidebar" id="sidebar-menu" role="navigation">
     <div class="sidebar-header">
-      <img src="images/logo.png" alt="logo" />
+      <img src="img/logoblanco.png" alt="Logo de BookMatch" />
       <h2>BookMatch</h2>
     </div>
     <ul class="sidebar-links">
@@ -27,10 +32,8 @@
         <a href="index.html">
           <span class="material-symbols-outlined"> dashboard </span>Home</a>
       </li>
-      <li>
-        <a href="#"><span class="material-symbols-outlined"> book </span>Nuevos</a>
-      </li>
-      <li>
+      <li><a href="contacto.html"><span class="material-symbols-outlined">contact_support</span>Contacto</a></li>
+      <li class="active">
         <a href="#"><span class="material-symbols-outlined"> monitoring </span>Los más vendidos</a>
       </li>
       <h4>
@@ -67,24 +70,14 @@
         <a href="#"><span class="material-symbols-outlined"> logout </span>Logout</a>
       </li>
     </ul>
-    <div class="user-account">
-      <div class="user-profile">
-        <img src="images/profile-img.jpg" alt="Profile Image" />
-        <div class="user-detail">
-          <h3>Eva Murphy</h3>
-          <span>Web Developer</span>
-        </div>
-      </div>
-    </div>
   </aside>
+
   <main class="main-content">
-    <!-- Aquí va todo tu contenido principal -->
-    <h2>TOP 20 LOS MÁS VENDIDOS DEL 2025</h2>
-    <Hr></Hr>
-  <div class="galeria">
+    <h1>Libros más vendidos del 2025</h1>
+  <div class="galeria" role="list">
     <div class="libro-container">
       <div class="libro">
-        <img src="img/portadas/archipielago.jpg" alt="Libro 1">
+        <img src="img/portadas/archipielago.jpg" alt="Portada del libro Archipiélago">
       </div>
       <div class="info">
         <h3>Archipiélago</h3>
@@ -94,8 +87,8 @@
       </div>
     </div>
     <div class="libro-container">
-      <div class="libro">
-        <img src="img/portadas/comodesaparecercompletamente.jpeg" alt="Libro 2">
+      <div class="libro" role="listitem">
+        <img src="img/portadas/comodesaparecercompletamente.jpeg" alt="Portada del libro Cómo desaparecer completamente">
       </div>
       <div class="info">
         <h3>Cómo desaparecer completamente</h3>
@@ -105,8 +98,8 @@
       </div>
     </div>
     <div class="libro-container">
-      <div class="libro">
-        <img src="img/portadas/elbuenmal.jpg" alt="libro 3">
+      <div class="libro" role="listitem">
+        <img src="img/portadas/elbuenmal.jpg" alt="Portada del libro El buen mal">
       </div>
       <div class="info">
         <h3>El buen mal</h3>
@@ -116,8 +109,8 @@
       </div>
     </div>
     <div class="libro-container">
-      <div class="libro">
-        <img src="img/portadas/lafelicidad.jpg" alt="Libro 4">
+      <div class="libro" role="listitem">
+        <img src="img/portadas/lafelicidad.jpg" alt="Portada del libro La Felicidad">
       </div>
       <div class="info">
         <h3>La Felicidad</h3>
@@ -127,8 +120,8 @@
       </div>
     </div>
     <div class="libro-container">
-      <div class="libro">
-        <img src="img/portadas/lamuerteajena.jpg" alt="Libro 5">
+      <div class="libro" role="listitem">
+        <img src="img/portadas/lamuerteajena.jpg" alt="Portada del libro La muerte ajena">
       </div>
       <div class="info">
         <h3>La muerte ajena</h3>
@@ -138,8 +131,8 @@
       </div>
     </div>
     <div class="libro-container">
-      <div class="libro">
-        <img src="img/portadas/lapacientesilenciosa.jpg" alt="Libro 6">
+      <div class="libro" role="listitem">
+        <img src="img/portadas/lapacientesilenciosa.jpg" alt="Portada del libro La Paciente Silenciosa">
       </div>
       <div class="info">
         <h3>La Paciente Silenciosa</h3>
@@ -149,8 +142,8 @@
       </div>
     </div>
     <div class="libro-container">
-      <div class="libro">
-        <img src="img/portadas/linaymandarina.jpg" alt="Libro 7">
+      <div class="libro" role="listitem">
+        <img src="img/portadas/linaymandarina.jpg" alt="Portada del libro Lyna y Mandarina">
       </div>
       <div class="info">
         <h3>Lyna y Mandarina</h3>
@@ -160,8 +153,8 @@
       </div>
     </div>
     <div class="libro-container">
-      <div class="libro">
-        <img src="img/portadas/minombreesemilidelvalle.jpg" alt="Libro 8">
+      <div class="libro" role="listitem">
+        <img src="img/portadas/minombreesemilidelvalle.jpg" alt="Portada del libro Mi Nombre es Emilia del Valle">
       </div>
       <div class="info">
         <h3>Mi Nombre es Emilia del Valle</h3>
@@ -171,8 +164,8 @@
       </div>
     </div> 
     <div class="libro-container">
-      <div class="libro">
-        <img src="img/portadas/misionenparis.jpg" alt="Libro 9">
+      <div class="libro" role="listitem">
+        <img src="img/portadas/misionenparis.jpg" alt="Portada del libro Misión en París">
       </div>
       <div class="info">
         <h3>Misión en París</h3>
@@ -182,8 +175,8 @@
       </div>
     </div> 
     <div class="libro-container">
-      <div class="libro">
-        <img src="img/portadas/rengoyeta.jpg" alt="Libro 10">
+      <div class="libro" role="listitem">
+        <img src="img/portadas/rengoyeta.jpg" alt="Portada del libro Rengo Yeta">
       </div>
       <div class="info">
         <h3>Rengo Yeta</h3>
@@ -193,8 +186,8 @@
       </div>
     </div> 
     <div class="libro-container">
-      <div class="libro">
-        <img src="img/portadas/losnuevos.webp" alt="Libro 11">
+      <div class="libro" role="listitem">
+        <img src="img/portadas/losnuevos.webp" alt="Portada del libro Los Nuevos">
       </div>
       <div class="info">
         <h3>Los Nuevos</h3>
@@ -204,8 +197,8 @@
       </div>
     </div> 
     <div class="libro-container">
-      <div class="libro">
-        <img src="img/portadas/topos.jpg" alt="Libro 12">
+      <div class="libro" role="listitem">
+        <img src="img/portadas/topos.jpg" alt="Portada del libro Topos">
       </div>
       <div class="info">
         <h3>Topos</h3>
@@ -215,8 +208,8 @@
       </div>
     </div> 
     <div class="libro-container">
-      <div class="libro">
-        <img src="img/portadas/perreo.jpg" alt="Libro 13">
+      <div class="libro" role="listitem">
+        <img src="img/portadas/perreo.jpg" alt="Portada del libro Perreo">
       </div>
       <div class="info">
         <h3>Perreo</h3>
@@ -226,8 +219,8 @@
       </div>
     </div>
      <div class="libro-container">
-      <div class="libro">
-        <img src="img/portadas/habitosatomicos.jpg" alt="Libro 14">
+      <div class="libro" role="listitem">
+        <img src="img/portadas/habitosatomicos.jpg" alt="Portada del libro Hábitos Atómicos">
       </div>
       <div class="info">
         <h3>Habitos Atomicos</h3>
@@ -237,19 +230,19 @@
       </div>
     </div> 
     <div class="libro-container">
-      <div class="libro">
-        <img src="img/portadas/elninoresentido.jpg" alt="Libro 15">
+      <div class="libro" role="listitem">
+        <img src="img/portadas/elninoresentido.jpg" alt="Portada del libro El Niño Resentido">
       </div>
       <div class="info">
         <h3>El Nino Resentido</h3>
         <p>César Gónzales</p>
         <p>Precio: $10.000</p>
         <button>Comprar</button>
-      </div
+      </div>
     </div> 
     <div class="libro-container">
-      <div class="libro">
-        <img src="img/portadas/estedolornoesmio.jpg" alt="Libro 16">
+      <div class="libro" role="listitem">
+        <img src="img/portadas/estedolornoesmio.jpg" alt="Portada del libro Este Dolor No Es Mío">
       </div>
       <div class="info">
         <h3>Este Dolor No Es Mío</h3>
@@ -259,8 +252,8 @@
       </div>
     </div> 
     <div class="libro-container">
-      <div class="libro">
-        <img src="img/portadas/loscuatroacuerdo.jpg" alt="Libro 17">
+      <div class="libro" role="listitem">
+        <img src="img/portadas/loscuatroacuerdo.jpg" alt="Portada del libro Los Cuatro Acuerdos">
       </div>
       <div class="info">
         <h3>Los Cuatro Acuerdos</h3>
@@ -270,8 +263,8 @@
       </div>
     </div> 
     <div class="libro-container">
-      <div class="libro">
-        <img src="img/portadas/dejadesertu.jpg" alt="Libro 18">
+      <div class="libro" role="listitem">
+        <img src="img/portadas/dejadesertu.jpg" alt="Portada del libro Deja De Ser Tú">
       </div>
       <div class="info">
         <h3>Deja De Ser Tú</h3>
@@ -281,8 +274,8 @@
       </div>
     </div> 
     <div class="libro-container">
-      <div class="libro">
-        <img src="img/portadas/diariodepilarenmexico.jpg" alt="Libro 19">
+      <div class="libro" role="listitem">
+        <img src="img/portadas/diariodepilarenmexico.jpg" alt="Portada del libro El Diario De Pilar En México">
       </div>
       <div class="info">
         <h3>El Diario De Pilar En Mexico</h3>
@@ -292,8 +285,8 @@
       </div>
     </div>
     <div class="libro-container">
-      <div class="libro">
-        <img src="img/portadas/mipsicologamedijo.png" alt="Libro 20">
+      <div class="libro" role="listitem">
+        <img src="img/portadas/mipsicologamedijo.png" alt="Portada del libro Mi Psicóloga Me Dijo">
       </div>
       <div class="info">
         <h3>Mi Psicologa Me Dijo</h3>
@@ -304,53 +297,30 @@
     </div>
   </div>
   </main>
-  <!-- footer starts from here-->
 <footer class="footer">
-<div class="container bottom_border">
-<div class="row">
-<div class=" col-sm-4 col-md col-sm-4  col-12 col">
-<h5 class="headin5_amrc col_white_amrc pt2">Find us</h5>
-<!--headin5_amrc-->
-<p class="mb10">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-<p><i class="fa fa-location-arrow"></i> 9878/25 sec 9 rohini 35 </p>
-<p><i class="fa fa-phone"></i>  +91-9999878398  </p>
-<p><i class="fa fa fa-envelope"></i> info@example.com  </p>
-</div>
-
-<div class="container">
-<ul class="foote_bottom_ul_amrc">
-<li><a href="#">Home</a></li>
-<li><a href="#">About</a></li>
-<li><a href="#">Services</a></li>
-<li><a href="#">Pricing</a></li>
-<li><a href="#">Blog</a></li>
-<li><a href="#">Contact</a></li>
-</ul>
-<p class="text-center">Copyright @2025 | Designed With by <a href="#">BookFilm</a></p>
-<ul class="social_footer_ul">
-<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-<li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-</ul>
-</div>
+    <div class="container">
+      <div class="bottom_border">
+        <div class="row">
+          <div class="col">
+            <h5>Find us</h5>
+            <p>BookMatch no es solo una librería virtual, sino un espacio para celebrar y promover la pasión por la lectura en el mundo digital.</p>
+            <p><i class="fa fa-location-arrow"></i> Córdoba, Argentina</p>
+            <p><i class="fa fa-envelope"></i> <a href="#" style="color: #CCC; text-decoration: none;">RRHHBookMatch@gmail.com</a></p>
+            <p><i class="fa-brands fa-github"></i> <a href="https://github.com/Bookfilm/BookMatch" target="_blank" rel="noopener noreferrer" style="color: #CCC; text-decoration: none;">Bookfilm/BookMatch</a></p>
+          </div>
+        </div>
+      </div>
+      <ul class="foote_bottom_ul_amrc">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">Nosotros</a></li>
+        <li><a href="mediosdepago.html">Pagos</a></li>
+        <li><a href="ventastop.html">Más Vendidos</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+      <p class="text-center">Copyright @2025 | Designed by <a href="https://github.com/Bookfilm" target="_blank" rel="noopener noreferrer">BookMatch Team</a></p>
+  </div>
 </footer>
-<script>
-  const hamburger = document.getElementById('hamburger-btn');
-  const sidebar = document.querySelector('.sidebar');
-  hamburger.addEventListener('click', () => {
-    sidebar.classList.toggle('open');
-    document.body.classList.toggle('menu-open', sidebar.classList.contains('open'));
-  });
-  document.addEventListener('click', (e) => {
-    if (
-      sidebar.classList.contains('open') &&
-      !sidebar.contains(e.target) &&
-      e.target !== hamburger
-    ) {
-      sidebar.classList.remove('open');
-      document.body.classList.remove('menu-open');
-    }
-  });
-</script>
+  <script src="js/Ventastop.js"></script>
+</body>
 </html>
