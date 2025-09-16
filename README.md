@@ -11,11 +11,11 @@ Los lectores se ven afectados al comprar un libro que después de leerlo pasa a 
 Oyente: Gabriel Pavon Molina [gabipavonmolina@gmail.com](mailto:gabipavonmolina@gmail.com) | GitHub: gavipavon01
 
 
-| Nombre                       | Rol           | Correo                      | Github               | DNI      |
-| ---------------------------- | ------------- | --------------------------- | -------------------- | -------- |
-| Anabella Lujan Medrano       | Scrum Master  | Analujan761@gmail.com       | Anaabella            | 46717059 |
-| Nadia Anahí Zambón         | Desarrollador | Nadianahi.20@gmail.com      | Nadiazambon          | 32589779 |
-| Claudia Del Pilar Farias     | Desarrollador | claudiafarias1881@gmail.com | Claudiafarias2022    | 28432825 |
-| Gabriel Agustin Pavon Molina | Oyente        | gabi.pavonmolina@gmail.com  | gabipavon01          | 43273165 |
-| Yohana Eugenia Grosso        | Desarrollador | yohi.grosso@gmail.com       | yohigf               | 33061552 |
-| Maria Soledad Scarlata       | Desarrollador | scarlatamarias@gmail.com    | mariasoledadscarlata | 21967307 |
+| Nombre | Rol |Sector | Correo | Github | DNI |
+| :---- | :---- | :---- | :---- | :---- | :---- |
+| Anabella Lujan Medrano | Scrum Master | Frontend  | Analujan761@gmail.com | Anaabella  | 46717059 |
+| Nadia Anahí Zambón | Desarrollador | Frontend | Nadianahi.20@gmail.com | Nadiazambon | 32589779  |
+| Claudia Del Pilar Farias  | Desarrollador | Backend | claudiafarias1881@gmail.com | Claudiafarias2022 |  28432825  |
+| Gabriel Agustin Pavon Molina | Oyente | Backend | gabi.pavonmolina@gmail.com | gabipavon01 |  43273165  |
+| Yohana Eugenia Grosso  | Desarrollador | Frontend | yohi.grosso@gmail.com | yohigf | 33061552 |
+| Maria Soledad Scarlata | Desarrollador | Backend | scarlatamarias@gmail.com | mariasoledadscarlata |  21967307  |
