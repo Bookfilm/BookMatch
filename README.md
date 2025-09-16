@@ -19,7 +19,3 @@ Oyente: Gabriel Pavon Molina [gabipavonmolina@gmail.com](mailto:gabipavonmolina@
 | Gabriel Agustin Pavon Molina | Oyente        | gabi.pavonmolina@gmail.com  | gabipavon01          | 43273165 |
 | Yohana Eugenia Grosso        | Desarrollador | yohi.grosso@gmail.com       | yohigf               | 33061552 |
 | Maria Soledad Scarlata       | Desarrollador | scarlatamarias@gmail.com    | mariasoledadscarlata | 21967307 |
-
-# 📚
-
-# 📚
