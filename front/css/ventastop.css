@@ -611,21 +611,4 @@ footer p { font-size:13px; color:#CCC; padding-bottom:0px; margin-bottom:8px;}
   }
 }
 
-<script>
-  const hamburger = document.getElementById('hamburger-btn');
-  const sidebar = document.querySelector('.sidebar');
-  hamburger.addEventListener('click', () => {
-    sidebar.classList.toggle('open');
-  });
-  // Opcional: cerrar menú al hacer click fuera
-  document.addEventListener('click', (e) => {
-    if (
-      sidebar.classList.contains('open') &&
-      !sidebar.contains(e.target) &&
-      e.target !== hamburger
-    ) {
-      sidebar.classList.remove('open');
-    }
-  });
-</script>
 
