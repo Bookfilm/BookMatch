@@ -1,0 +1,213 @@
+.contact-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-header h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.contact-header p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.contact-form-wrapper {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form-wrapper h2 {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: #333;
+  text-align: center;
+}
+
+.contacto-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contacto-form label {
+  font-weight: 600;
+  color: #555;
+  margin-bottom: -5px;
+}
+
+.contacto-form input, .contacto-form select, .contacto-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.contacto-form input:focus, .contacto-form select:focus, .contacto-form textarea:focus {
+  outline: none;
+  border-color: #9a031e;
+}
+
+.contacto-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.enviar-button {
+  background-color: #9a031e;
+  color: white;
+  font-weight: 600;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.enviar-button:hover {
+  background-color: #c70428;
+}
+
+.info-adicional-container {
+  margin-top: 40px;
+}
+
+.bloque {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 25px;
+  margin-bottom: 25px;
+}
+
+.bloque h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #9a031e;
+}
+
+.bloque p {
+  font-size: 1rem;
+  color: #444;
+}
+
+.medios-envio {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.titulo-seccion {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.opciones {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.opcion {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 30px 20px;
+  text-align: center;
+  flex: 1 1 220px;
+  max-width: 280px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.opcion i {
+  font-size: 2.5rem;
+  color: #9a031e;
+  margin-bottom: 15px;
+}
+
+.opcion h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.opcion p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.faq-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.medios-pago-section {
+  margin-top: 40px;
+  text-align: left;
+}
+
+.medios-pago-section .bloque {
+  text-align: left;
+}
+
+.medios-pago-section ul {
+  list-style-position: inside;
+  margin: 15px 0;
+}
+
+.seguridad {
+  background-color: #eef5ff;
+  padding: 20px;
+  border-left: 5px solid #9a031e;
+  margin-top: 25px;
+  border-radius: 0 8px 8px 0;
+}
+
+.seguridad h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.botones-indice {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.boton-indice {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #9a031e;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.boton-indice:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
