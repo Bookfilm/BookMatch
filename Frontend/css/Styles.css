@@ -72,8 +72,8 @@
 }
 
 .testimonial-card {
-  background-color: #9a031e; /* Mismo color que la sidebar */
-  color: #ffffff; /* Texto blanco para contraste */
+  background-color: #9a031e;
+  color: #ffffff;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   padding: 30px;
@@ -86,7 +86,7 @@
 
 .testimonial-text {
   font-style: italic;
-  color: #f0f0f0; /* Un blanco un poco más suave */
+  color: #f0f0f0;
   margin-bottom: 20px;
   flex-grow: 1;
 }
@@ -99,7 +99,7 @@
 
 .testimonial-author span {
   font-size: 0.9rem;
-  color: #e0e0e0; /* Un gris claro para el subtítulo */
+  color: #e0e0e0;
 }
 
 @media (min-width: 601px) {

@@ -66,6 +66,7 @@ body {
 .col_white_amrc { color:#FFF;}
 
 
+
 .body-no-scroll {
   overflow: hidden;
 }
@@ -220,6 +221,7 @@ body {
   .libro-container {
     width: 100vw;
     max-width: 280px;
+    max-width: 280px;
     margin: 0 auto 16px auto;
   }
   .libro {
@@ -235,12 +237,16 @@ body {
   .info {
     max-width: 100%;
     width: 100%;
+    max-width: 100%;
+    width: 100%;
     height: auto;
+    min-height: 100px;
     min-height: 100px;
     padding-bottom: 10px;
   }
   .info h3,
   .info p {
+    max-width: 100%;
     max-width: 100%;
     font-size: 13px;
   }
@@ -248,5 +254,7 @@ body {
     font-size: 13px;
     padding: 5px 10px;
   }
+}
+
 }
 
