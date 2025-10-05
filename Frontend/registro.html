@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registro – BookMatch</title>
+
+    <!-- Mismos CSS que usa el login -->
+    <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="signin.css" rel="stylesheet">
+  </head>
+
+  <body class="text-center">
+    <form class="form-signin" id="registerForm">
+      <img class="mb-4" src="img/logo.png" alt="" width="72" height="72">
+      <h1 class="h3 mb-3 font-weight-normal">Crear cuenta</h1>
+
+      <label for="regEmail" class="sr-only">Email</label>
+      <input type="email" id="regEmail" class="form-control" placeholder="Email" required autofocus>
+
+      <label for="regPassword" class="sr-only">Contraseña</label>
+      <input type="password" id="regPassword" class="form-control" placeholder="Contraseña" required>
+
+      <button class="btn btn-lg btn-success btn-block" type="submit">Registrarse</button>
+      <p class="mt-3">
+        ¿Ya tienes cuenta? <a href="formlogin.html">Inicia sesión</a>
+      </p>
+    </form>
+
+    <!-- LÓGICA REGISTRO -->
+    <script src="js/registro.js"></script>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+body {
+    background: #f8f9fa;
+    font-family: 'Poppins', Arial, sans-serif;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+.producto-container {
+    display: flex;
+    gap: 40px;
+    max-width: 900px;
+    margin: 40px auto 20px auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 32px;
+    align-items: flex-start;
+}
+
+.portada img {
+    width: 240px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+}
+
+.info {
+    flex: 1;
+}
+
+.info h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: #9a031e;
+}
+
+.info h2 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: #444;
+}
+
+.precio {
+    font-size: 1.3rem;
+    color: #007bff;
+    margin-bottom: 16px;
+}
+
+.detalles {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 18px;
+}
+
+.detalles li {
+    margin-bottom: 6px;
+    font-size: 1rem;
+}
+
+.comprar-btn {
+    background: #9a031e;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 32px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.comprar-btn:hover {
+    background: #7c0218;
+}
+
+.sinopsis, .especificaciones {
+    max-width: 900px;
+    margin: 0 auto 24px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    padding: 24px;
+}
+
+.sinopsis h3, .especificaciones h3 {
+    color: #9a031e;
+    margin-bottom: 12px;
+}
+
+.especificaciones ul {
+    list-style: none;
+    padding: 0;
+}
+
+.especificaciones li {
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+.producto-container,
+.sinopsis,
+.especificaciones {
+  margin-left: 117px; /* 85px sidebar + 32px espacio extra */
+  margin-right: 24px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: calc(100% - 117px - 24px);
+  max-width: none;          /* Elimina el límite de ancho */
+  padding: 40px 32px; /* más espacio interno arriba/abajo y a los lados */
+}

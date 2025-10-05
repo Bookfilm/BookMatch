@@ -249,6 +249,16 @@ body {
 }
 
 @media (min-width: 601px) {
+  .producto-container,
+  .sinopsis,
+  .especificaciones,
+  .footer,
+  .main-content {
+    margin-left: 85px;
+  }
+}
+
+@media (min-width: 601px) {
   .main-content, .footer {
     transition: none;
   }
@@ -340,3 +350,4 @@ body {
     display: flex;
   }
 }
+
