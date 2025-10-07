@@ -1,80 +1,58 @@
-create database bookmatch;
-
--- creamos la tabla usuario/comprador (paso 2)
+CREATE DATABASE IF NOT EXISTS bookmatch;
 USE bookmatch;
-create table usuario(
-usuario_id int primary key auto_increment,
-nombre varchar(50),
-apellido varchar(50),
-email varchar(50) unique,
-contraseña varchar(50),
-fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP, -- esto guarda el momento en que se creo el usuario
-id_rol int,
-FOREIGN KEY (id_rol) REFERENCES rol(rol_id)
+
+CREATE TABLE rol (
+    rol_id INT PRIMARY KEY AUTO_INCREMENT,
+    rol VARCHAR(50) NOT NULL UNIQUE
 );
 
--- creamos la tabla rol (paso 3)
-USE bookmatch;
-create table rol(
-rol_id int primary key auto_increment,
-rol varchar(50)
+CREATE TABLE usuario (
+    usuario_id INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(50),
+    apellido VARCHAR(50),
+    email VARCHAR(50) UNIQUE,
+    contraseña VARCHAR(255),          -- más largo por hash
+    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    id_rol INT NOT NULL,
+    CONSTRAINT fk_usuario_rol
+        FOREIGN KEY (id_rol) REFERENCES rol(rol_id)
 );
 
--- Agregamos la columna rol a la tabla usuario (paso 4)
-ALTER TABLE usuario
-ADD COLUMN rol INT;
-
--- Agregamos la clave foránea
-ALTER TABLE usuario
-ADD CONSTRAINT fk_id_rol
-FOREIGN KEY (id_rol) REFERENCES rol(rol_id);
-
--- creamos la tabla sesion (paso 5)
-USE bookmatch;
-create table sesion(
-sesion_id int primary key auto_increment,
-fecha_inicio datetime,
-fecha_fin datetime,
-id_usuario int,
-FOREIGN KEY (id_usuario) REFERENCES usuario(usuario_id)
+CREATE TABLE libro (
+    libro_id INT PRIMARY KEY AUTO_INCREMENT,
+    titulo VARCHAR(120),
+    autor VARCHAR(120),
+    isbn VARCHAR(13) UNIQUE
 );
 
--- Agregamos la columna usuario a la tabla sesion
-ALTER TABLE sesion
-ADD COLUMN usuario INT;
-
--- Agregamos la clave foránea
-ALTER TABLE sesion
-ADD CONSTRAINT fk_id_usuario
-FOREIGN KEY (id_usuario) REFERENCES usuario(usuario_id);
-
--- agregamos la columna libro
-USE bookmatch;
-create table libro(
-libro_id int primary key auto_increment,
-id_compra int,
-titulo varchar(120),
-Autor varchar(120),
-isbn int (11),
-FOREIGN KEY (id_compra) REFERENCES compra(compra_id)
+CREATE TABLE compra (
+    compra_id INT PRIMARY KEY AUTO_INCREMENT,
+    id_usuario INT NOT NULL,
+    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    fecha_modificacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                              ON UPDATE CURRENT_TIMESTAMP,
+    precio_total DOUBLE,
+    CONSTRAINT fk_compra_usuario
+        FOREIGN KEY (id_usuario) REFERENCES usuario(usuario_id)
 );
 
-USE bookmatch;
-Create table compra(
-compra_id int primary key auto_increment,
-id_usuario int,
-FOREIGN KEY (id_usuario) REFERENCES usuario(usuario_id),
-fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP, -- esto guarda el momento en que se creo el usuario
-fecha_modificacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-precio_total DOUBLE -- esto guarda el momento en que se modifico el usuario
+CREATE TABLE detalle_compra (
+    detalle_id INT PRIMARY KEY AUTO_INCREMENT,
+    id_compra INT NOT NULL,
+    id_libro  INT NOT NULL,
+    cantidad  INT NOT NULL DEFAULT 1,
+    precio_unitario DOUBLE NOT NULL,
+    CONSTRAINT fk_detalle_compra
+        FOREIGN KEY (id_compra) REFERENCES compra(compra_id),
+    CONSTRAINT fk_detalle_libro
+        FOREIGN KEY (id_libro)  REFERENCES libro(libro_id)
 );
 
--- Agregamos la columna compra a la tabla libro
-ALTER TABLE libro
-ADD COLUMN compra INT;
-
--- Agregamos la clave foránea
-ALTER TABLE libro
-ADD CONSTRAINT fk_id_compra
-FOREIGN KEY (id_compra) REFERENCES compra(compra_id);
-
+CREATE TABLE sesion (
+    sesion_id INT PRIMARY KEY AUTO_INCREMENT,
+    fecha_inicio DATETIME,
+    fecha_fin DATETIME,
+    id_usuario INT NOT NULL,
+    CONSTRAINT fk_sesion_usuario
+        FOREIGN KEY (id_usuario) REFERENCES usuario(usuario_id)
+);
