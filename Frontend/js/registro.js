@@ -1,29 +1,32 @@
 (() => {
-        const form = document.getElementById('registerForm');
-        const emailInput = document.getElementById('regEmail');
-        const passInput  = document.getElementById('regPassword');
+  const form = document.getElementById('registroForm');
 
-        // Lee array de usuarios o crea uno vacío
-        const users = JSON.parse(localStorage.getItem('bm_users') || '[]');
+  form.addEventListener('submit', e => {
+    e.preventDefault();
 
-        form.addEventListener('submit', e => {
-          e.preventDefault();               // evita recargo
+    const nombre = document.getElementById('nombre').value.trim();
+    const apellido = document.getElementById('apellido').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value.trim();
+    const confirmPassword = document.getElementById('confirmPassword').value.trim();
 
-          const email = emailInput.value.trim();
-          const pwd   = passInput.value.trim();
+    if (password !== confirmPassword) {
+      alert('Las contraseñas no coinciden.');
+      return;
+    }
 
-          // Validación súper básica
-          if (!email || !pwd) return alert('Completa los campos');
+    const users = JSON.parse(localStorage.getItem('bm_users') || '[]');
 
-          // Evita duplicados
-          if (users.some(u => u.email === email))
-            return alert('Este email ya está registrado');
+    const userExists = users.some(user => user.email === email);
+    if (userExists) {
+      alert('El correo electrónico ya está registrado.');
+      return;
+    }
 
-          // Añade nuevo usuario
-          users.push({ email, password: pwd });
-          localStorage.setItem('bm_users', JSON.stringify(users));
+    users.push({ nombre, apellido, email, password });
+    localStorage.setItem('bm_users', JSON.stringify(users));
 
-          alert('Usuario creado');
-          location.href = 'formlogin.html'; // lleva al login
-        });
-      })();
+    alert('¡Registro exitoso! Ahora puedes iniciar sesión.');
+    location.href = 'formlogin.html';
+  });
+})();
