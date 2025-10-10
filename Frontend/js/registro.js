@@ -1,32 +1,34 @@
-(() => {
-  const form = document.getElementById('registroForm');
+document.addEventListener('DOMContentLoaded', () => {
+    const registroForm = document.getElementById('registroForm');
 
-  form.addEventListener('submit', e => {
-    e.preventDefault();
+    if (registroForm) {
+        registroForm.addEventListener('submit', (event) => {
+            event.preventDefault(); // Evitamos que el formulario se envíe y la página se recargue.
 
-    const nombre = document.getElementById('nombre').value.trim();
-    const apellido = document.getElementById('apellido').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const password = document.getElementById('password').value.trim();
-    const confirmPassword = document.getElementById('confirmPassword').value.trim();
+            // Obtenemos los valores de los campos del formulario
+            const nombreInput = document.getElementById('nombre');
+            const passwordInput = document.getElementById('password');
+            const confirmPasswordInput = document.getElementById('confirmPassword');
 
-    if (password !== confirmPassword) {
-      alert('Las contraseñas no coinciden.');
-      return;
+            const username = nombreInput.value.trim();
+            const password = passwordInput.value;
+            const confirmPassword = confirmPasswordInput.value;
+
+            // Validamos que las contraseñas coincidan
+            if (password !== confirmPassword) {
+                alert('Las contraseñas no coinciden. Por favor, inténtalo de nuevo.');
+                return; // Detenemos la ejecución si no coinciden
+            }
+
+            if (username) {
+                // Guardamos el nombre de usuario en localStorage para usarlo en otras páginas
+                localStorage.setItem('loggedInUser', username);
+
+                alert(`¡Bienvenido, ${username}! Tu cuenta ha sido creada.`);
+
+                // Redirigimos al usuario a la página principal
+                window.location.href = 'index.html';
+            }
+        });
     }
-
-    const users = JSON.parse(localStorage.getItem('bm_users') || '[]');
-
-    const userExists = users.some(user => user.email === email);
-    if (userExists) {
-      alert('El correo electrónico ya está registrado.');
-      return;
-    }
-
-    users.push({ nombre, apellido, email, password });
-    localStorage.setItem('bm_users', JSON.stringify(users));
-
-    alert('¡Registro exitoso! Ahora puedes iniciar sesión.');
-    location.href = 'formlogin.html';
-  });
-})();
+});
