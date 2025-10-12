@@ -709,7 +709,7 @@ body:not(.form-page-body) {
   color: white;
 }
 
-.form-container, .form-signin {
+.form-container{
   width: 400px;
   background-color: rgba(150, 77, 77, 0.13);
   position: relative;
@@ -721,15 +721,8 @@ body:not(.form-page-body) {
   margin: auto;
 }
 
-.form-signin {
-  height: 520px;
-}
-
-.form-container h1, .form-signin h1 {
-  font-size: 32px;
-  font-weight: 500;
-  line-height: 42px;
-  text-align: center;
+.reg-log{
+  color: #fff
 }
 
 .form-page-body label {
