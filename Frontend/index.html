@@ -1,125 +1,13 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="BookMatch: tu sitio de compra y venta de libros nuevos, usados y antiguos. Descubre una gran variedad de géneros a precios accesibles.">
-    <title>BookMatch</title>
-    <link rel="icon" href="img/logo.png" type="image/png">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/Styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-</head>
-<body>
-  <header class="mobile-header">
-    <h1 class="mobile-title">BookMatch</h1>
-  </header>
-  <button class="hamburger" id="hamburger-btn" aria-label="Abrir menú" aria-controls="sidebar-menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-  <aside class="sidebar" id="sidebar-menu">
-    <div class="sidebar-header">
-      <img src="img/logoblanco.png" alt="Logo de BookMatch" />
-      <h2>BookMatch</h2>
-    </div>
-    <ul class="sidebar-links">
-      <h4><span>Menu</span><div class="menu-separator"></div></h4>
-      <li><a href="index.html"><span class="material-symbols-outlined">dashboard</span>Home</a></li>
-      <li><a href="contacto.html"><span class="material-symbols-outlined">contact_support</span>Contacto</a></li>
-      <li><a href="ventastop.html"><span class="material-symbols-outlined">monitoring</span>Los más vendidos</a></li>
-      <h4><span>General</span><div class="menu-separator"></div></h4>
-      <li><a href="#"><span class="material-symbols-outlined">folder</span>Catálogo</a></li>
-      <li><a href="#"><span class="material-symbols-outlined">box</span>Envíos</a></li>
-      <li><a href="#"><span class="material-symbols-outlined">move</span>Donaciones</a></li>
-      <li><a href="#"><span class="material-symbols-outlined">message</span>Comentarios</a></li>
-      <li><a href="#"><span class="material-symbols-outlined">notifications_active</span>Notificaciones</a></li>
-      <h4><span>Nosotros</span><div class="menu-separator"></div></h4>
-      <li><a href="#"><span class="material-symbols-outlined">account_circle</span>Perfil</a></li>
-      <li><a href="#"><span class="material-symbols-outlined">settings</span>Buscar</a></li>
-      <li><a href="#"><span class="material-symbols-outlined">logout</span>Salir</a></li>
-    </ul>
-  </aside>
-
-  <header class="banner-principal">
-    <div class="banner-content">
-      <h1>BookMatch</h1>
-      <p>Bienvenidos a nuestro sitio de compra y venta de libros. Aquí encontrarás una gran oferta de libros nuevos, usados y antiguos.</p>
-    </div>
-  </header>
-
-  <main class="main-content">
-    <section class="info-section" id="about">
-      <h2>¿Por qué elegir BookMatch?</h2>
-      <div class="features">
-        <div class="feature-item">
-          <i class="fas fa-book-open"></i>
-          <h3>Gran Variedad</h3>
-          <p>Explora miles de géneros y autores, desde clásicos hasta las últimas novedades.</p>
-        </div>
-        <div class="feature-item">
-          <i class="fas fa-hand-holding-usd"></i>
-          <h3>Precios Accesibles</h3>
-          <p>Encuentra libros nuevos y usados a precios que se ajustan a tu bolsillo.</p>
-        </div>
-        <div class="feature-item">
-          <i class="fas fa-shield-alt"></i>
-          <h3>Venta Segura</h3>
-          <p>Un sistema de transacciones protegido para que compres y vendas con confianza.</p>
-        </div>
-        <div class="feature-item">
-          <i class="fas fa-shipping-fast"></i>
-          <h3>Envíos Rápidos</h3>
-          <p>Recibe tus libros en la puerta de tu casa de la manera más rápida y eficiente.</p>
-        </div>
-      </div>
-    </section>
-    <section class="info-section" aria-labelledby="testimonials-heading">
-      <h2>Reseñas de nuestros usuarios</h2>
-      <div class="testimonials-container">
-        <div class="testimonial-card">
-          <p class="testimonial-text">"Encontré los libros que estaba buscando hace mucho tiempo a un buen precio. La variedad es increíble y el proceso de compra fue muy sencillo."</p>
-          <div class="testimonial-author">
-            <strong>Ana García</strong>
-            <span>Lector Satisfecho</span>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <p class="testimonial-text">"Consegui un descuento increible para comprar otros libros al donar libros que tenia guardado"</p>
-          <div class="testimonial-author">
-            <strong>Javier Martínez</strong>
-            <span>Lector Frecuente</span>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="bottom_border">
-        <div class="row">
-          <div class="col">
-            <h5>Sobre Nosotros</h5>
-            <p>BookMatch no es solo una librería virtual, sino un espacio para celebrar y promover la pasión por la lectura en el mundo digital.</p>
-            <p><i class="fa fa-location-arrow"></i> Córdoba, Argentina</p>
-            <p><i class="fa fa-envelope"></i> <a href="#" style="color: #CCC; text-decoration: none;">RRHHBookMatch@gmail.com</a></p>
-            <p><i class="fa-brands fa-github"></i> <a href="https://github.com/Bookfilm/BookMatch" target="_blank" rel="noopener noreferrer" style="color: #CCC; text-decoration: none;">Bookfilm/BookMatch</a></p>
-          </div>
-        </div>
-      </div>
-      <ul class="foote_bottom_ul_amrc">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#about">Nosotros</a></li>
-        <li><a href="mediosdepago.html">Pagos</a></li>
-        <li><a href="ventastop.html">Más Vendidos</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-      <p class="text-center">Copyright @2025 | Designed by <a href="https://github.com/Bookfilm" target="_blank" rel="noopener noreferrer">BookMatch Team</a></p>
-    </div>
-  </footer>
-
-  <script src="js/Ventastop.js"></script>
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>frontend</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
