@@ -400,18 +400,6 @@ body:not(.form-page-body) {
     font-size: 1rem;
 }
 
-.comprar-btn {
-    background: #9a031e;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    padding: 12px 32px;
-    font-size: 1.1rem;
-    cursor: pointer;
-}
-
-
-
 .sinopsis, .especificaciones {
     max-width: 900px;
     margin: 0 auto 24px auto;
@@ -642,19 +630,6 @@ body:not(.form-page-body) {
   transform: rotateY(20deg) translateZ(5px);
 }
 
-.libro span {
-  display: block;
-  position: absolute;
-  bottom: -13px;
-  height: 100px;
-  right: -110px;
-  width: 200px;
-  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.1) 15%);
-  border-radius: 15px;
-  box-shadow: 5px 12px 15px 5px rgba(0, 0, 0, 0.1);
-  transform: rotate(5deg) skew(-35deg);
-}
-
 .info h3 {
   margin: 0 0 5px;
   font-size: 16px;
@@ -678,14 +653,6 @@ body:not(.form-page-body) {
   margin: 8px auto 0;
   display: block;
 }
-
-.leer-mas-btn {
-  margin-top: 10px;
-  color: #9a031e;
-  text-decoration: none;
-  font-weight: 600;
-}
-
 
 @media (max-width: 900px) {
   .galeria {
@@ -929,6 +896,11 @@ body:not(.form-page-body) {
 .info-section#faq {
   padding: 30px;
 }
+
+.bloque#texto{
+   text-align: left;
+}
+
 .info-section#medios-pago {
   background-color: #e6f4ff;
   border-left: 5px solid #9a031e;
@@ -937,11 +909,9 @@ body:not(.form-page-body) {
   margin-left: 20px;
 }
 
-.info-section#medios-pago .bloque {
-  text-align: left;
-}
-
 .info-section#medios-pago ul {
+  display: inline-block;
+  text-align: left;
   list-style-position: inside;
   margin-bottom: 20px;
 }
@@ -980,57 +950,9 @@ body:not(.form-page-body) {
   color: #9a031e;
 }
 
-.politica-privacidad {
-  font-family: "Segoe UI", Roboto, sans-serif;
-  color: #333;
-  background-color: #fafafa;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
+.terminosycondiciones {
+  margin-top: 20px;
 }
-
-.politica-privacidad .container {
-  max-width: 900px;
-  background: #fff;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
-
-.politica-privacidad h1,
-.politica-privacidad h2 {
-  color: #2c3e50;
-}
-
-.politica-privacidad h1 {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.politica-privacidad p {
-  margin-bottom: 15px;
-}
-
-.politica-privacidad ul {
-  margin: 10px 0 20px 25px;
-}
-
-.politica-privacidad a {
-  color: #0077cc;
-  text-decoration: none;
-}
-
-.politica-privacidad a:hover {
-  text-decoration: underline;
-}
-
-.politica-privacidad footer {
-  text-align: center;
-  margin-top: 40px;
-  font-size: 0.9em;
-  color: #666;
-}
-
 
 .hero-section {
     background: #9a031e; 
@@ -1042,7 +964,7 @@ body:not(.form-page-body) {
 @media (max-width: 600px) {
     .hero-section {
         margin-left: 0;
-        padding-top: 90px; /* 70px header + 20px extra */
+        padding-top: 90px; 
     }
 }
 @media (min-width: 601px) {
@@ -1168,4 +1090,9 @@ body:not(.form-page-body) {
 .lead {
     font-size: 1.25rem;
     font-weight: 300;
+}
+
+.ventas{
+  text-align: center;
+  margin-top: 10px;
 }

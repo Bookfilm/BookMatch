@@ -11,13 +11,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-  <header class="mobile-header">
+   <header class="mobile-header">
     <h1 class="mobile-title">BookMatch</h1>
   </header>
   <button class="hamburger" id="hamburger-btn" aria-label="Abrir menú" aria-controls="sidebar-menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
-  <aside class="sidebar" id="sidebar-menu">
+    <aside class="sidebar" id="sidebar-menu">
     <div class="sidebar-header">
       <img src="img/logoblanco.png" alt="Logo de BookMatch" />
       <h2>BookMatch</h2>
@@ -29,11 +29,11 @@
       <li><a href="ventastop.html"><span class="material-symbols-outlined">monitoring</span>Los más vendidos</a></li>
       <h4><span>General</span><div class="menu-separator"></div></h4>
       <li><a href="Quienessomos.html"><span class="material-symbols-outlined">groups</span>Quiénes Somos</a></li>
-      <li><a href="terminosycondiciones.html"><span class="material-symbols-outlined">policy</span>Términos y Condiciones</a></li>
-      <li><a href="#"><span class="material-symbols-outlined">message</span>Comentarios</a></li>
+      <li><a href="terminosycondiciones.html"><span class="material-symbols-outlined">policy</span>Condiciones de Uso</a></li>
+ 
       <h4><span>Nosotros</span><div class="menu-separator"></div></h4>
-      <li><a href="registro.html"><span class="material-symbols-outlined">account_circle</span>Perfil</a></li>
-      <li><a href="#"><span class="material-symbols-outlined">settings</span>Buscar</a></li>
+      <li><a href="registro.html" id="profile-link"><span class="material-symbols-outlined">account_circle</span><span id="profile-text">Perfil</span></a></li>
+      <li><a href="#"><span class="material-symbols-outlined">settings</span>Configuración</a></li>
     </ul>
   </aside>
 
@@ -94,35 +94,32 @@
       <div class="galeria">
         <div class="libro-item">
           <div class="libro">
-            <span></span>
             <img src="img/portadas/dejadesertu.jpg" alt="Deja de ser tú">
           </div>
           <div class="info libro-info">
             <h3>Deja de ser tú</h3>
             <p>Joe Dispenza</p>
-            <a href="Productos/dejadesertu.html" class="leer-mas-btn">Leer más...</a>
+            <a href="./dejadesertu.html" class="leer-mas-btn"><strong>Leer Mas...</strong></a>
           </div>
         </div>
         <div class="libro-item">
           <div class="libro">
-            <span></span>
             <img src="img/portadas/habitosatomicos.jpg" alt="Hábitos Atómicos">
           </div>
           <div class="info libro-info">
             <h3>Hábitos Atómicos</h3>
             <p>James Clear</p>
-            <a href="Productos/habitosatomicos.html" class="leer-mas-btn">Leer más...</a>
+            <a href="./habitosatomicos.html" class="leer-mas-btn"><strong>Leer más...</strong></a>
           </div>
         </div>
         <div class="libro-item">
           <div class="libro">
-            <span></span>
             <img src="img/portadas/loscuatroacuerdo.jpg" alt="Los Cuatro Acuerdos">
           </div>
           <div class="info libro-info">
             <h3>Los Cuatro Acuerdos</h3>
             <p>Miguel Ruiz</p>
-            <a href="Productos/loscuatroacuerdos.html" class="leer-mas-btn">Leer más...</a>
+            <a href="./loscuatroacuerdos.html" class="leer-mas-btn"><strong>Leer más...</strong></a>
           </div>
         </div>
       </div>
@@ -154,7 +151,6 @@
     </div>
   </footer>
 
-  <script src="js/Ventastop.js" defer></script>
-  <script src="js/auth.js" defer></script>
+  <script src="js/script.js" defer></script>
 </body>
 </html>

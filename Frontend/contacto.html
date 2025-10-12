@@ -29,7 +29,7 @@
       <li><a href="ventastop.html"><span class="material-symbols-outlined">monitoring</span>Los más vendidos</a></li>
       <h4><span>General</span><div class="menu-separator"></div></h4>
       <li><a href="Quienessomos.html"><span class="material-symbols-outlined">groups</span>Quiénes Somos</a></li>
-      <li><a href="terminosycondiciones.html"><span class="material-symbols-outlined">policy</span>Términos y Condiciones</a></li>
+      <li><a href="terminosycondiciones.html"><span class="material-symbols-outlined">policy</span>Condiciones de Uso</a></li>
       <h4><span>Nosotros</span><div class="menu-separator"></div></h4>
       <li><a href="registro.html" id="profile-link"><span class="material-symbols-outlined">account_circle</span><span id="profile-text">Perfil</span></a></li>
       <li><a href="#"><span class="material-symbols-outlined">settings</span>Configuración</a></li>
@@ -53,7 +53,6 @@
         <i class="fa-solid fa-comments"></i>
       </a>
     </div>
-
     <div class="contact-form-wrapper">
       <h2>Envíanos un mensaje</h2>
       <form class="contacto-form">
@@ -66,13 +65,10 @@
         </select>
 
         <label for="nombre">Nombre y apellido</label>
-        <input type="text" id="nombre" name="nombre" required>
+        <input type="text" id="nombre" name="nombre" required minlength="5" maxlength="50">
 
         <label for="email">Tu correo electrónico</label>
-        <input type="email" id="email" name="email" re
-
-        <label for="orden">Número de orden (opcional)</label>
-        <input type="text" id="orden" name="orden" placeholder="Ej: #12345">
+        <input type="email" id="email" name="email" required>
 
         <label for="mensaje">Tu mensaje</label>
         <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
@@ -104,7 +100,7 @@
 
     <section id="medios-pago" class="info-section">
       <h2 class="titulo-seccion">Medios de Pago</h2>
-      <div class="bloque">
+      <div class="bloque" style="text-align: left;">
         <h3>¿Cuáles son las formas de pago habilitadas?</h3>
         <p>Para compras dentro de la Argentina, las formas de pago son:</p>
         <ul>
@@ -127,9 +123,10 @@
       </div>
     </section>
 
-    <section class="politica-privacidad">
-      <div class="container">
-      <h1>Política de Privacidad</h1>
+<section id="medios-pago" class="info-section" style="padding-bottom: 40px; margin-bottom: 20px;">
+      <h2 class="titulo-seccion">Medios de Pago</h2>
+      <div class="bloque" id="texto">
+        <h1>Política de Privacidad</h1>
       <p><strong>Última actualización:</strong> Octubre 2025</p>
   
       <p>En <strong>BookMatch</strong> valoramos tu privacidad y nos comprometemos a proteger tus datos personales. 
@@ -207,15 +204,10 @@
       <h2>11. Modificaciones a esta Política</h2>
       <p>BookMatch podrá modificar esta Política de Privacidad en cualquier momento. Las modificaciones se publicarán en esta página con su fecha de actualización. 
       Te recomendamos revisarla periódicamente.</p>
-  
-      <footer>
-        <p>&copy; 2025 BookMatch. Todos los derechos reservados.</p>
-      </footer>
-    </div>
-  </section>
-
+        </div>
+      </div>
+    </section>
   </main>
-  
   <footer class="footer">
     <div class="container">
       <div class="bottom_border">
@@ -248,7 +240,6 @@
   </footer>
   
 
-  <script src="js/Ventastop.js" defer></script>
-  <script src="js/auth.js" defer></script>
+  <script src="js/script.js" defer></script>
 </body>
 </html>
