@@ -7,29 +7,24 @@
     <meta name="author" content="">
     <link rel="icon" href="img/logo.png">
     <title>Signin Template for Bootstrap</title>
-    <!-- Bootstrap core CSS -->
-    <!-- Custom styles for this template -->
-    <link href="css/formlogin.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
   </head>
 
-  <body class="text-center">
-    <form class="form-signin">
+  <body class="form-page-body">
+    <form class="form-container">
       <img class="mb-4" src="img/logo.png" alt="" width="72" height="72">
-      <h1 class="h3 mb-3 font-weight-normal">Registrate aquí:</h1>
-      <label for="inputEmail" class="sr-only">Email (entre 10 y 40 caracteres)</label>
-      <input type="email" id="inputEmail" class="form-control" name="Email" placeholder="Correo electronico" minlength="10" maxlength="40" required>
-      <label for="inputPassword" class="sr-only">Contraseña (entre 8 y 16 caracteres)</label>
-      <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Contraseña"  minlength="8" maxlength="16" required>
-      <div class="checkbox mb-3">
-        <label>
-          <input type="checkbox" id="rememberCheck" value="remember-me"> Recuérdame
-        </label>
-      </div>
+      <h1 class="h3 mb-3 font-weight-normal">Inicia Sesión:</h1>
+   <label for="email">Email</label>
+      <input type="email" placeholder="Email" id="email" required>
+      <label for="password">Contraseña</label>
+      <input type="password" placeholder="Contraseña" id="password" required min="8" max="16">
+      <br>
+       <strong><p>Si no tienes una cuenta</p></strong><a href="registro.html" class="reg-log">Registrate aquí</a>
       <button class="btn btn-lg btn-primary btn-block" type="submit">Iniciar Sesión</button> 
-      <p class="mt-5 mb-3 text-muted">&copy; BookMatch-2025</p>
+      <p class="mt-5 mb-3 text-muted" style="margin-top: 10px;">&copy; BookMatch-2025</p>
     </form>
-    <!-- Modal de Políticas de Privacidad -->
-
-    <script src="js/formlogin.js"></script>
+    <script src="js/script.js" defer></script>
   </body>
 </html>

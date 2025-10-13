@@ -1,57 +1,97 @@
-$(document).ready(function(){
+// Botón Hamburguer
 
-   var $sm = 480;
-   var $md = 768;
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburgerBtn = document.getElementById('hamburger-btn');
+  const sidebar = document.getElementById('sidebar-menu');
+  const body = document.body;
 
-   function resizeThis() {
-      $imgH = $('.middle img').width();
-      if ($(window).width() >= $sm) {
-         $('.left,.right,.section').css('height', $imgH);
-      } else {
-         $('.left,.right,.section').css('height', 'auto');
-      }
-   }
+  if (!hamburgerBtn || !sidebar) {
+    console.error("No se encontraron los elementos del menú (hamburger o sidebar).");
+    return;
+  }
 
-   resizeThis();
+  const toggleMenu = () => {
+    const isOpen = sidebar.classList.toggle('open');
+    hamburgerBtn.classList.toggle('open', isOpen);
+    hamburgerBtn.setAttribute('aria-expanded', isOpen);
+    body.classList.toggle('menu-open', isOpen);
+  };
 
-   $(window).resize(function(){
-      resizeThis();
-   });
+  hamburgerBtn.addEventListener('click', toggleMenu);
 
-   $(window).scroll(function() {
-      $('.section').each(function(){
-         var $elementPos = $(this).offset().top;
-         var $scrollPos = $(window).scrollTop();
-
-         var $sectionH = $(this).height();
-         var $h = $(window).height();
-         var $sectionVert = (($h/2)-($sectionH/4));
-
-
-         if (($elementPos - $sectionVert) <= $scrollPos && ($elementPos - $sectionVert) + $sectionH > $scrollPos) {
-            $(this).addClass('animate');
-         } else {
-            $(this).removeClass('animate');
-         }
-      });
-   });
-
-   $('.btn-primary').click(function(){
-      alert('I lied');
-   });
-});
-
-$(function() {
-  $('a[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
-      }
+  document.addEventListener('click', (e) => {
+    if (sidebar.classList.contains('open') && !sidebar.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+      toggleMenu();
     }
   });
+});
+
+// Nombre de perfil en el sidebar
+
+document.addEventListener('DOMContentLoaded', () => {
+    const profileText = document.getElementById('profile-text');
+    const profileLink = document.getElementById('profile-link');
+    const loggedInUser = localStorage.getItem('loggedInUser');
+
+    if (loggedInUser && profileText) {
+        profileText.textContent = loggedInUser;
+        if (profileLink) profileLink.href = 'index.html';
+    }
+});
+
+// Registro de user
+
+document.addEventListener('DOMContentLoaded', () => {
+    const registroForm = document.getElementById('registroForm');
+
+    if (registroForm) {
+        registroForm.addEventListener('submit', (event) => {            event.preventDefault(); 
+            const nombreInput = document.getElementById('nombre');
+            const passwordInput = document.getElementById('password');
+            const confirmPasswordInput = document.getElementById('confirmPassword');
+
+            const username = nombreInput.value.trim();
+            const password = passwordInput.value;
+            const confirmPassword = confirmPasswordInput.value;
+
+            if (password !== confirmPassword) {
+                alert('Las contraseñas no coinciden. Por favor, inténtalo de nuevo.');
+                return; 
+            }
+
+            if (username) {
+                localStorage.setItem('loggedInUser', username);
+
+                alert(`¡Bienvenido, ${username}! Tu cuenta ha sido creada.`);
+                window.location.href = 'index.html';
+            }
+        });
+    }
+});
+
+// login hardcodeado
+
+document.addEventListener('DOMContentLoaded', () => {
+    const loginForm = document.querySelector('.form-signin');
+
+    if (loginForm) {
+        loginForm.addEventListener('submit', (event) => {            event.preventDefault(); 
+            const emailInput = document.getElementById('inputEmail');
+            const passwordInput = document.getElementById('inputPassword');
+
+            const email = emailInput.value;
+            const password = passwordInput.value;
+
+            const adminEmail = 'admin@gmail.com';
+            const adminPassword = 'admin123';
+
+            if (email === adminEmail && password === adminPassword) {
+                localStorage.setItem('loggedInUser', 'Admin');
+                alert('¡Bienvenido, Admin!');
+                window.location.href = 'index.html'; 
+            } else {
+                alert('Email o contraseña incorrectos. Por favor, inténtalo de nuevo.');
+            }
+        });
+    }
 });

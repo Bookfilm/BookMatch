@@ -6,8 +6,7 @@
   <meta name="description" content="Contacta con BookMatch para cualquier consulta sobre tus compras, envíos o para resolver tus dudas.">
   <title>Contacto - BookMatch</title>
   <link rel="icon" href="img/logo.png" type="image/png">
-  <link rel="stylesheet" href="css/Styles.css">
-  <link rel="stylesheet" href="css/contacto.css">
+  <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
@@ -29,14 +28,10 @@
       <li class="active"><a href="contacto.html"><span class="material-symbols-outlined">contact_support</span>Contacto</a></li>
       <li><a href="ventastop.html"><span class="material-symbols-outlined">monitoring</span>Los más vendidos</a></li>
       <h4><span>General</span><div class="menu-separator"></div></h4>
-      <li><a href="#"><span class="material-symbols-outlined">folder</span>Catálogo</a></li>
-      <li><a href="#"><span class="material-symbols-outlined">box</span>Envíos</a></li>
-      <li><a href="#"><span class="material-symbols-outlined">move</span>Donaciones</a></li>
-      <li><a href="#"><span class="material-symbols-outlined">notifications_active</span>Notificaciones</a></li>
+      <li><a href="Quienessomos.html"><span class="material-symbols-outlined">groups</span>Quiénes Somos</a></li>
+      <li><a href="terminosycondiciones.html"><span class="material-symbols-outlined">policy</span>Condiciones de Uso</a></li>
       <h4><span>Nosotros</span><div class="menu-separator"></div></h4>
-      <li><a href="#"><span class="material-symbols-outlined">account_circle</span>Profile</a></li>
-      <li><a href="#"><span class="material-symbols-outlined">settings</span>Settings</a></li>
-      <li><a href="#"><span class="material-symbols-outlined">logout</span>Logout</a></li>
+      <li><a href="registro.html" id="profile-link"><span class="material-symbols-outlined">account_circle</span><span id="profile-text">Perfil</span></a></li>
     </ul>
   </aside>
 
@@ -57,7 +52,6 @@
         <i class="fa-solid fa-comments"></i>
       </a>
     </div>
-
     <div class="contact-form-wrapper">
       <h2>Envíanos un mensaje</h2>
       <form class="contacto-form">
@@ -70,13 +64,10 @@
         </select>
 
         <label for="nombre">Nombre y apellido</label>
-        <input type="text" id="nombre" name="nombre" required>
+        <input type="text" id="nombre" name="nombre" required minlength="5" maxlength="50">
 
         <label for="email">Tu correo electrónico</label>
         <input type="email" id="email" name="email" required>
-
-        <label for="orden">Número de orden (opcional)</label>
-        <input type="text" id="orden" name="orden" placeholder="Ej: #12345">
 
         <label for="mensaje">Tu mensaje</label>
         <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
@@ -108,7 +99,7 @@
 
     <section id="medios-pago" class="info-section">
       <h2 class="titulo-seccion">Medios de Pago</h2>
-      <div class="bloque">
+      <div class="bloque" style="text-align: left;">
         <h3>¿Cuáles son las formas de pago habilitadas?</h3>
         <p>Para compras dentro de la Argentina, las formas de pago son:</p>
         <ul>
@@ -122,24 +113,14 @@
         <p>Sí, la seguridad está garantizada por el uso de los protocolos <strong>Secure HTTP</strong> y <strong>Secure Sockets Layer (SSL)</strong>. Utilizamos el sistema de Pago Seguro de Mobbex y MercadoPago para operar con las principales tarjetas.</p>
       </div>
     </section>
-
-    <section id="faq" class="info-section">
-      <h2 class="titulo-seccion">Compra Online</h2>
-      <div class="opciones">
-        <div class="opcion">
-          <a href="#" class="faq-link"><i class="fa-solid fa-comments"></i><h3>Preguntas Frecuentes</h3></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="politica-privacidad">
-      <div class="container">
-      <h1>Política de Privacidad</h1>
+    <br>
+<section id="medios-pago" class="info-section" style="padding-bottom: 40px; margin-bottom: 20px;">
+      <h2 class="titulo-seccion">Políticas de Privacidad</h2>
+      <div class="bloque" id="texto">
       <p><strong>Última actualización:</strong> Octubre 2025</p>
-  
-      <p>En <strong>BookMatch</strong> valoramos tu privacidad y nos comprometemos a proteger tus datos personales. 
+       <p>En <strong>BookMatch</strong> valoramos tu privacidad y nos comprometemos a proteger tus datos personales. 
       Esta Política de Privacidad explica cómo recopilamos, usamos, almacenamos y protegemos la información de los usuarios que acceden y utilizan nuestro sitio web 
-      <a href="https://bookmatchbf.netlify.app" target="_blank">https://bookmatchbf.netlify.app</a>.</p>
+      <a href="https://bookmatchbf.netlify.app" target="_blank">https://bookmatchbf.netlify.app</a>.</p><br>
   
       <h2>1. Responsable del tratamiento</h2>
       <p>El responsable del tratamiento de tus datos personales es <strong>BookMatch</strong>, con sede en la República Argentina. 
@@ -158,7 +139,7 @@
         <li>Fecha de nacimiento</li>
         <li>Contraseña (en forma cifrada)</li>
       </ul>
-      <p>Además, recopilamos información técnica de navegación, como dirección IP, tipo de dispositivo, navegador y páginas visitadas, con fines estadísticos y de mejora del servicio.</p>
+      <p>Además, recopilamos información técnica de navegación, como dirección IP, tipo de dispositivo, navegador y páginas visitadas, con fines estadísticos y de mejora del servicio.</p><br>
   
       <h2>3. Finalidad del tratamiento</h2>
       <p>Usamos tus datos personales para los siguientes fines:</p>
@@ -173,11 +154,11 @@
       <h2>4. Base legal del tratamiento</h2>
       <p>El tratamiento de tus datos se realiza conforme a la <strong>Ley N.º 25.326 de Protección de Datos Personales</strong> y sus normas complementarias. 
       El uso del sitio y la creación de una cuenta implican tu consentimiento libre, expreso e informado para el tratamiento de tus datos con las finalidades aquí detalladas.</p>
-  
+  <br>
       <h2>5. Conservación de los datos</h2>
       <p>Conservaremos tus datos personales mientras tu cuenta permanezca activa o durante el tiempo necesario para cumplir con las finalidades mencionadas. 
       Podés solicitar la eliminación de tus datos en cualquier momento enviando un correo a <a href="mailto:ventas@bookmatch.com">ventas@bookmatch.com</a>.</p>
-  
+  <br>
       <h2>6. Comunicación y transferencia de datos</h2>
       <p>BookMatch no cede, vende ni alquila tus datos personales a terceros.  
       Solo podremos compartirlos en los siguientes casos:</p>
@@ -201,32 +182,27 @@
       <p>Podés ejercer estos derechos enviando un correo electrónico a 
       <a href="mailto:ventas@bookmatch.com">ventas@bookmatch.com</a>.  
       La Agencia de Acceso a la Información Pública, organismo de control de la Ley N.º 25.326, tiene la facultad de atender denuncias y reclamos relacionados con el incumplimiento de las normas sobre protección de datos personales.</p>
-  
+  <br>
       <h2>9. Cookies y tecnologías similares</h2>
       <p>BookMatch utiliza cookies para mejorar la experiencia del usuario, analizar el tráfico y personalizar el contenido.  
       Podés configurar tu navegador para rechazar o eliminar cookies, aunque esto podría afectar el funcionamiento del sitio.</p>
-  
+  <br>
       <h2>10. Enlaces externos</h2>
       <p>El sitio puede contener enlaces a páginas de terceros. BookMatch no se hace responsable por el contenido ni por las prácticas de privacidad de dichos sitios.</p>
-  
+  <br>
       <h2>11. Modificaciones a esta Política</h2>
       <p>BookMatch podrá modificar esta Política de Privacidad en cualquier momento. Las modificaciones se publicarán en esta página con su fecha de actualización. 
       Te recomendamos revisarla periódicamente.</p>
-  
-      <footer>
-        <p>&copy; 2025 BookMatch. Todos los derechos reservados.</p>
-      </footer>
-    </div>
-  </section>
-
+        </div>
+      </div>
+    </section>
   </main>
-  
   <footer class="footer">
     <div class="container">
       <div class="bottom_border">
         <div class="row">
           <div class="col">
-            <h5>Find us</h5>
+            <h5> Sobre Nosotros</h5>
             <p>BookMatch no es solo una librería virtual, sino un espacio para celebrar y promover la pasión por la lectura en el mundo digital.</p>
             <p><i class="fa fa-location-arrow"></i> Córdoba, Argentina</p>
             <p><i class="fa fa-envelope"></i> <a href="#" style="color: #CCC; text-decoration: none;">RRHHBookMatch@gmail.com</a></p>
@@ -253,7 +229,6 @@
   </footer>
   
 
-
-  <script src="js/Ventastop.js"></script>
+  <script src="js/script.js" defer></script>
 </body>
 </html>
