@@ -1,4 +1,4 @@
 [build]
   base    = "Frontend"
-  command = "npm run build"
-  publish = "dist"        # ← relativo a la carpeta base
+  command = ""
+  publish = "."
