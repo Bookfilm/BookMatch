@@ -60,12 +60,37 @@ class crud_menu:
             if opcion == "1":
                 print("Crear libro:")
                 titulo   = input("Título: ")
-                autor    = input("Autor : ")
-                año      = input("Año   : ")
+                autor    = input("Autor : ")                
+                while True:
+                    año_input = input("Año   : ")
+                    try:
+                        año = int(año_input)
+                        break
+                    except ValueError:
+                        print("Año inválido. Por favor, ingresa solo números.")
+
                 idioma   = input("Idioma: ")
-                paginas  = input("Páginas: ")
-                print("Géneros: 1 Terror | 2 Romance | 3 Ciencia-Ficción")
-                genero   = input("Id gen: ")
+
+                while True:
+                    paginas_input = input("Páginas: ")
+                    try:
+                        paginas = int(paginas_input)
+                        break
+                    except ValueError:
+                        print("Valor de páginas inválido. Por favor, ingresa solo números.")
+
+                print(f"Géneros: {self.generos}")
+                while True:
+                    genero_input = input("Id gen: ")
+                    try:
+                        genero = int(genero_input)
+                        if genero in self.generos:
+                            break
+                        else:
+                            print("ID de género no válido. Por favor, elige uno de la lista.")
+                    except ValueError:
+                        print("ID de género inválido. Por favor, ingresa solo números.")
+
                 self.crear(titulo, autor, año, idioma, paginas, genero)
                 print("Libro agregado.")
             elif opcion == "2":

@@ -95,3 +95,37 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// Formulario de Contacto con EmailJS
+
+document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.querySelector('.contacto-form');
+
+    if (contactForm) {
+        const serviceID = 'service_myft9xe';
+        const templateID = 'template_a4jodpi';
+        const publicKey = 'CztM52XuoUpJieW4H';
+
+        emailjs.init({ publicKey: publicKey });
+
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const submitButton = this.querySelector('.enviar-button');
+            submitButton.textContent = 'Enviando...';
+            submitButton.disabled = true;
+
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    submitButton.textContent = 'Enviar Mensaje';
+                    submitButton.disabled = false;
+                    alert('¡Mensaje enviado con éxito!');
+                    this.reset();
+                }, (err) => {
+                    submitButton.textContent = 'Enviar Mensaje';
+                    submitButton.disabled = false;
+                    alert('Ocurrió un error al enviar el mensaje. Por favor, inténtalo de nuevo.\n' + JSON.stringify(err));
+                });
+        });
+    }
+});
