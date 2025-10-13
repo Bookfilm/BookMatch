@@ -72,12 +72,12 @@ document.addEventListener('DOMContentLoaded', () => {
 // login hardcodeado
 
 document.addEventListener('DOMContentLoaded', () => {
-    const loginForm = document.querySelector('.form-signin');
+    const loginForm = document.querySelector('.form-container');
 
     if (loginForm) {
         loginForm.addEventListener('submit', (event) => {            event.preventDefault(); 
-            const emailInput = document.getElementById('inputEmail');
-            const passwordInput = document.getElementById('inputPassword');
+            const emailInput = document.getElementById('email');
+            const passwordInput = document.getElementById('password');
 
             const email = emailInput.value;
             const password = passwordInput.value;
