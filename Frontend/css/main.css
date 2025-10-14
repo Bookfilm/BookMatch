@@ -280,10 +280,11 @@ body:not(.form-page-body) {
 }
 
 .info-section {
-  padding: 40px 20px;
+    padding: 40px 20px;
   text-align: center;
 }
 .info-section h2 {
+  padding-top: 20px;
   font-size: 2rem;
   margin-bottom: 30px;
   color: #333;

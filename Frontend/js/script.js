@@ -72,12 +72,12 @@ document.addEventListener('DOMContentLoaded', () => {
 // login hardcodeado
 
 document.addEventListener('DOMContentLoaded', () => {
-    const loginForm = document.querySelector('.form-signin');
+    const loginForm = document.querySelector('.form-container');
 
     if (loginForm) {
         loginForm.addEventListener('submit', (event) => {            event.preventDefault(); 
-            const emailInput = document.getElementById('inputEmail');
-            const passwordInput = document.getElementById('inputPassword');
+            const emailInput = document.getElementById('email');
+            const passwordInput = document.getElementById('password');
 
             const email = emailInput.value;
             const password = passwordInput.value;
@@ -92,6 +92,40 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 alert('Email o contraseña incorrectos. Por favor, inténtalo de nuevo.');
             }
+        });
+    }
+});
+
+// Formulario de Contacto con EmailJS
+
+document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.querySelector('.contacto-form');
+
+    if (contactForm) {
+        const serviceID = 'service_myft9xe';
+        const templateID = 'template_a4jodpi';
+        const publicKey = 'CztM52XuoUpJieW4H';
+
+        emailjs.init({ publicKey: publicKey });
+
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const submitButton = this.querySelector('.enviar-button');
+            submitButton.textContent = 'Enviando...';
+            submitButton.disabled = true;
+
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    submitButton.textContent = 'Enviar Mensaje';
+                    submitButton.disabled = false;
+                    alert('¡Mensaje enviado con éxito!');
+                    this.reset();
+                }, (err) => {
+                    submitButton.textContent = 'Enviar Mensaje';
+                    submitButton.disabled = false;
+                    alert('Ocurrió un error al enviar el mensaje. Por favor, inténtalo de nuevo.\n' + JSON.stringify(err));
+                });
         });
     }
 });
