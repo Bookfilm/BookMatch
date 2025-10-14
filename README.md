@@ -18,4 +18,4 @@ Oyente: Gabriel Pavon Molina [gabipavonmolina@gmail.com](mailto:gabipavonmolina@
 | Claudia Del Pilar Farias     | Desarrollador | Backend  | claudiafarias1881@gmail.com | Claudiafarias2022    | 28432825 |
 | Gabriel Agustin Pavon Molina | Oyente        | Backend  | gabi.pavonmolina@gmail.com  | gabipavon01          | 43273165 |
 | Yohana Eugenia Grosso        | Desarrollador | Frontend | yohi.grosso@gmail.com       | yohigf               | 33061552 |
-| Maria Soledad Scarlata       | Desarrollador | Backend  | scarlatamarias@gmail.com    | mariasoledadscarlata | 21967307 |
+| Maria Soledad Scarlata       | Desarrollador | Backend  | scarlatamarias@gmail.com    | mariasoledadscarlata | 21967307 
