@@ -22,12 +22,13 @@
     </div>
     <ul class="sidebar-links">
       <h4><span>Menu</span><div class="menu-separator"></div></h4>
-      <li><a href="index.html"><span class="material-symbols-outlined">dashboard</span>Home</a></li>
-      <li><a href="contacto.html"><span class="material-symbols-outlined">contact_support</span>Contacto</a></li>
-      <li><a href="ventastop.html"><span class="material-symbols-outlined">monitoring</span>Los más vendidos</a></li>
+      <li><a href="index.html"><span class="material-symbols-outlined">dashboard</span><span>Home</span></a></li>
+      <li><a href="contacto.html"><span class="material-symbols-outlined">contact_support</span><span>Contacto</span></a></li>
+      <li><a href="ventastop.html"><span class="material-symbols-outlined">monitoring</span><span>Los más vendidos</span></a></li>
       <h4><span>General</span><div class="menu-separator"></div></h4>
-      <li><a href="Quienessomos.html"><span class="material-symbols-outlined">groups</span>Quiénes Somos</a></li>
-      <li><a href="terminosycondiciones.html"><span class="material-symbols-outlined">policy</span>Condiciones de Uso</a></li>
+      <li><a href="Quienessomos.html"><span class="material-symbols-outlined">groups</span><span>Quiénes Somos</span></a></li>
+      <li><a href="politica-privacidad.html"><span class="material-symbols-outlined">privacy_tip</span><span>Política de Privacidad</span></a></li>
+      <li><a href="terminosycondiciones.html"><span class="material-symbols-outlined">policy</span><span>Condiciones de Uso</span></a></li>
  
       <h4><span>Nosotros</span><div class="menu-separator"></div></h4>
       <li><a href="registro.html" id="profile-link"><span class="material-symbols-outlined">account_circle</span><span id="profile-text">Perfil</span></a></li>
@@ -37,17 +38,19 @@
 
        <main class="main-content"><div class="producto-container">
         <div class="portada">
-            <img src="img/portadas/lamuerteajena.jpg" alt="Mi nombre es Emilia del Valle">
+            <img src="img/portadas/lamuerteajena.jpg" alt="Portada del libro La muerte ajena">
         </div>
         <div class="info">
-            <h1>La muerte ajena</h1>
-            <h2>Autor: Claudia Piñeiro</h2>
-            <p class="precio">Precio: $10.000</p>
-            <ul class="detalles">
-                <li><strong>ISBN:</strong> 9786313011797</li>
-                <li><strong>Categoría:</strong> Ficcion moderna y contemporanea</li>
-            </ul>
-            <button>Comprar</button>
+            <div class="libro-info">
+                <h1>La muerte ajena</h1>
+                <h2>Autor: Claudia Piñeiro</h2>
+                <p class="precio">Precio: $10.000</p>
+                <ul class="detalles">
+                    <li><strong>ISBN:</strong> 9786313011797</li>
+                    <li><strong>Categoría:</strong> Ficcion moderna y contemporanea</li>
+                </ul>
+            </div>
+            <button class="comprar-btn">Comprar</button>
         </div>
     </div>
     <div class="sinopsis">
@@ -82,8 +85,8 @@
       </div>
       <ul class="foote_bottom_ul_amrc">
         <li><a href="index.html">Home</a></li>
-        <li><a href="#about">Nosotros</a></li>
-        <li><a href="mediosdepago.html">Pagos</a></li>
+        <li><a href="Quienessomos.html">Quiénes Somos</a></li>
+        <li><a href="contacto.html#medios-pago">Pagos</a></li>
         <li><a href="ventastop.html">Más Vendidos</a></li>
         <li><a href="#">Blog</a></li>
         <li><a href="contacto.html">Contacto</a></li>
@@ -91,6 +94,14 @@
       <p class="text-center">Copyright @2025 | Designed by <a href="https://github.com/Bookfilm" target="_blank" rel="noopener noreferrer">BookMatch Team</a></p>
     </div>
   </footer>
+  <!-- Modal Structure -->
+  <div id="successModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <p>¡Agregado al carrito con éxito!</p>
+      <button class="modal-ok-button">Aceptar</button>
+    </div>
+  </div>
   <script src="js/script.js"></script>
 </body>
 </html>

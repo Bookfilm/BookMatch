@@ -9,17 +9,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+  <a href="index.html" class="back-to-home-btn">Volver al Inicio</a>
+
 </head>
 <body class="form-page-body">
   <div class="form-container">
     <form id="registroForm">
       <h1>Crear Cuenta</h1>
-
       <label for="nombre">Nombre</label>
-      <input type="text" placeholder="Tu nombre" name="nombre" id="nombre" required>
+      <input type="text" placeholder="Tu nombre" name="nombre" id="nombre" required minlength="5">
 
       <label for="apellido">Apellido</label>
-      <input type="text" placeholder="Tu apellido" name="apellido" id="apellido" required>
+      <input type="text" placeholder="Tu apellido" name="apellido" id="apellido" required minlength="5">
 
       <label for="email">Email</label>
       <input type="email" placeholder="Email" id="email" required>
