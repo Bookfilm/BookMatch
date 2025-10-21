@@ -70,7 +70,6 @@ class crud_menu:
                         print("Año inválido. Por favor, ingresa solo números.")
 
                 idioma   = input("Idioma: ")
-
                 while True:
                     paginas_input = input("Páginas: ")
                     try:

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi nombre es Emilia del Valle</title>
+    <title>Lyna Y Mandarina Una Aventura En Altamar</title>
     <link rel="icon" href="img/logo.png" type="image/png">
     <link rel="stylesheet" href="css/main.css">
      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -22,12 +22,13 @@
     </div>
     <ul class="sidebar-links">
       <h4><span>Menu</span><div class="menu-separator"></div></h4>
-      <li><a href="index.html"><span class="material-symbols-outlined">dashboard</span>Home</a></li>
-      <li><a href="contacto.html"><span class="material-symbols-outlined">contact_support</span>Contacto</a></li>
-      <li><a href="ventastop.html"><span class="material-symbols-outlined">monitoring</span>Los más vendidos</a></li>
+      <li><a href="index.html"><span class="material-symbols-outlined">dashboard</span><span>Home</span></a></li>
+      <li><a href="contacto.html"><span class="material-symbols-outlined">contact_support</span><span>Contacto</span></a></li>
+      <li><a href="ventastop.html"><span class="material-symbols-outlined">monitoring</span><span>Los más vendidos</span></a></li>
       <h4><span>General</span><div class="menu-separator"></div></h4>
-      <li><a href="Quienessomos.html"><span class="material-symbols-outlined">groups</span>Quiénes Somos</a></li>
-      <li><a href="terminosycondiciones.html"><span class="material-symbols-outlined">policy</span>Condiciones de Uso</a></li>
+      <li><a href="Quienessomos.html"><span class="material-symbols-outlined">groups</span><span>Quiénes Somos</span></a></li>
+      <li><a href="politica-privacidad.html"><span class="material-symbols-outlined">privacy_tip</span><span>Política de Privacidad</span></a></li>
+      <li><a href="terminosycondiciones.html"><span class="material-symbols-outlined">policy</span><span>Condiciones de Uso</span></a></li>
  
       <h4><span>Nosotros</span><div class="menu-separator"></div></h4>
       <li><a href="registro.html" id="profile-link"><span class="material-symbols-outlined">account_circle</span><span id="profile-text">Perfil</span></a></li>
@@ -37,17 +38,19 @@
 
        <main class="main-content"><div class="producto-container">
         <div class="portada">
-            <img src="img/portadas/linaymandarina.jpg" alt="lynaymandarina">
+            <img src="img/portadas/linaymandarina.jpg" alt="Portada del libro Lyna y Mandarina">
         </div>
         <div class="info">
-            <h1>Lyna Y Mandarina Una Aventura En Altamar</h1>
-            <h2>Autor: Lyna Vallejos</h2>
-            <p class="precio">Precio: $10.000</p>
-            <ul class="detalles">
-                <li><strong>ISBN:</strong> 9786319114904 </li>
-                <li><strong>Categoría:</strong> Ficción Contemporánea Infantil</li>
-            </ul>
-            <button>Comprar</button>
+            <div class="libro-info">
+                <h1>Lyna Y Mandarina Una Aventura En Altamar</h1>
+                <h2>Autor: Lyna Vallejos</h2>
+                <p class="precio">Precio: $10.000</p>
+                <ul class="detalles">
+                    <li><strong>ISBN:</strong> 9786319114904 </li>
+                    <li><strong>Categoría:</strong> Ficción Contemporánea Infantil</li>
+                </ul>
+            </div>
+            <button class="comprar-btn">Comprar</button>
         </div>
     </div>
     <div class="sinopsis">
@@ -73,16 +76,13 @@
           <div class="col">
             <h5> Sobre Nosotros</h5>
             <p>BookMatch no es solo una librería virtual, sino un espacio para celebrar y promover la pasión por la lectura en el mundo digital.</p>
-            <p><i class="fa fa-location-arrow"></i> Córdoba, Argentina</p>
-            <p><i class="fa fa-envelope"></i> <a href="#" style="color: #CCC; text-decoration: none;">RRHHBookMatch@gmail.com</a></p>
-            <p><i class="fa-brands fa-github"></i> <a href="https://github.com/Bookfilm/BookMatch" target="_blank" rel="noopener noreferrer" style="color: #CCC; text-decoration: none;">Bookfilm/BookMatch</a></p>
-          </div>
-        </div>
-      </div>
+             <p><span class="material-symbols-outlined">location_on</span> Córdoba, Argentina</p>
+            <p><span class="material-symbols-outlined">mail</span> <a href="#" style="color: #CCC; text-decoration: none;">RRHHBookMatch@gmail.com</a></p>
+            <p><span class="material-symbols-outlined">code</span> <a href="https://github.com/Bookfilm/BookMatch" target="_blank" rel="noopener noreferrer" style="color: #CCC; text-decoration: none;">Bookfilm/BookMatch</a></p>
       <ul class="foote_bottom_ul_amrc">
         <li><a href="index.html">Home</a></li>
-        <li><a href="#about">Nosotros</a></li>
-        <li><a href="mediosdepago.html">Pagos</a></li>
+        <li><a href="Quienessomos.html">Quiénes Somos</a></li>
+        <li><a href="contacto.html#medios-pago">Pagos</a></li>
         <li><a href="ventastop.html">Más Vendidos</a></li>
         <li><a href="#">Blog</a></li>
         <li><a href="contacto.html">Contacto</a></li>
@@ -90,6 +90,14 @@
       <p class="text-center">Copyright @2025 | Designed by <a href="https://github.com/Bookfilm" target="_blank" rel="noopener noreferrer">BookMatch Team</a></p>
     </div>
   </footer>
+  <!-- Modal Structure -->
+  <div id="successModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <p>¡Agregado al carrito con éxito!</p>
+      <button class="modal-ok-button">Aceptar</button>
+    </div>
+  </div>
   <script src="js/script.js"></script>
  
 </body>

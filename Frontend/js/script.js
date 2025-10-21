@@ -35,11 +35,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (loggedInUser && profileText) {
         profileText.textContent = loggedInUser;
-        if (profileLink) profileLink.href = 'index.html';
+        if (profileLink) profileLink.href = 'perfil.html';
     }
 });
 
-// Registro de user
+// Registro de usuario
 
 document.addEventListener('DOMContentLoaded', () => {
     const registroForm = document.getElementById('registroForm');
@@ -66,6 +66,33 @@ document.addEventListener('DOMContentLoaded', () => {
                 window.location.href = 'index.html';
             }
         });
+    }
+});
+
+// Lógica de la página de Perfil
+document.addEventListener('DOMContentLoaded', () => {
+    const profileInfoDiv = document.getElementById('profile-info');
+    const logoutBtn = document.getElementById('logout-btn');
+    const loggedInUser = localStorage.getItem('loggedInUser');
+
+    // Esta lógica solo se ejecuta si estamos en la página de perfil
+    if (profileInfoDiv && logoutBtn) {
+        if (loggedInUser) {
+            // Mostrar datos del usuario
+            profileInfoDiv.innerHTML = `
+                <p style="font-size: 1.1rem;"><strong>Nombre de Usuario:</strong> ${loggedInUser}</p>
+                <p style="font-size: 1.1rem;"><strong>Estado:</strong> Conectado</p>
+            `;
+
+            logoutBtn.addEventListener('click', () => {
+                localStorage.removeItem('loggedInUser');
+                alert('Has cerrado sesión.');
+                window.location.href = 'index.html';
+            });
+        } else {
+            alert('No has iniciado sesión.');
+            window.location.href = 'login.html'; 
+        }
     }
 });
 
@@ -99,33 +126,73 @@ document.addEventListener('DOMContentLoaded', () => {
 // Formulario de Contacto con EmailJS
 
 document.addEventListener('DOMContentLoaded', () => {
-    const contactForm = document.querySelector('.contacto-form');
+    const contactForm = document.getElementById('contact-form');
 
     if (contactForm) {
         const serviceID = 'service_myft9xe';
         const templateID = 'template_a4jodpi';
         const publicKey = 'CztM52XuoUpJieW4H';
 
-        emailjs.init({ publicKey: publicKey });
+        emailjs.init({ publicKey });
 
         contactForm.addEventListener('submit', function(event) {
             event.preventDefault();
 
             const submitButton = this.querySelector('.enviar-button');
+            const formMessage = document.getElementById('form-message');
+
             submitButton.textContent = 'Enviando...';
             submitButton.disabled = true;
+            formMessage.textContent = '';
+            const templateParams = {
+                asunto: this.asunto.value,
+                nombre: this.nombre.value,
+                email: this.email.value,
+                mensaje: this.mensaje.value,
+            };
 
-            emailjs.sendForm(serviceID, templateID, this)
+            emailjs.send(serviceID, templateID, templateParams)
                 .then(() => {
                     submitButton.textContent = 'Enviar Mensaje';
                     submitButton.disabled = false;
-                    alert('¡Mensaje enviado con éxito!');
+                    formMessage.textContent = '¡Mensaje enviado con éxito!';
+                    formMessage.style.color = 'green';
                     this.reset();
-                }, (err) => {
+                }, (error) => {
                     submitButton.textContent = 'Enviar Mensaje';
                     submitButton.disabled = false;
-                    alert('Ocurrió un error al enviar el mensaje. Por favor, inténtalo de nuevo.\n' + JSON.stringify(err));
+                    formMessage.textContent = 'Error al enviar el mensaje: ' + error.text;
+                    formMessage.style.color = 'red';
                 });
         });
+    }
+});
+
+// Modal para el botón "Comprar"
+document.addEventListener('DOMContentLoaded', () => {
+    // Selecciona todos los botones "Comprar" en la página
+    const buyButtons = document.querySelectorAll('.comprar-btn');
+    const successModal = document.getElementById('successModal');
+    const closeModalBtn = document.querySelector('#successModal .close-button');
+    const modalOkBtn = document.querySelector('#successModal .modal-ok-button');
+
+    if (buyButtons.length > 0 && successModal) {
+        buyButtons.forEach(button => {
+            button.addEventListener('click', (event) => {
+                event.preventDefault(); // Evita cualquier acción por defecto del botón
+                successModal.style.display = 'flex'; // Muestra el modal
+            });
+        });
+
+        const hideModal = () => {
+            successModal.style.display = 'none';
+        };
+
+        if (closeModalBtn) {
+            closeModalBtn.addEventListener('click', hideModal);
+        }
+        if (modalOkBtn) {
+            modalOkBtn.addEventListener('click', hideModal);
+        }
     }
 });
