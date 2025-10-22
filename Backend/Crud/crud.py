@@ -54,8 +54,7 @@ class crud_menu:
 
     def menu(self):
         while True:
-            self.listar()
-            print("\n1 Crear | 2 Editar | 3 Borrar | 4 Salir")
+            print("\n1 Crear | 2 Editar | 3 Borrar | 4 Listar | 5 Salir")
             opcion = input(">>> ")
             if opcion == "1":
                 print("Crear libro:")
@@ -89,7 +88,6 @@ class crud_menu:
                             print("ID de género no válido. Por favor, elige uno de la lista.")
                     except ValueError:
                         print("ID de género inválido. Por favor, ingresa solo números.")
-
                 self.crear(titulo, autor, año, idioma, paginas, genero)
                 print("Libro agregado.")
             elif opcion == "2":
@@ -117,6 +115,8 @@ class crud_menu:
                 self.baja(identificador)
                 print("Borrado.")
             elif opcion == "4":
+                self.listar()
+            elif opcion == "5":
                 print("¡Chau!")
                 break
             else:

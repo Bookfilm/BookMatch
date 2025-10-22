@@ -165,6 +165,9 @@ body:not(.form-page-body) {
   font-weight: 600;
   color: #9a031e;
 }
+
+/* menu hamburguer*/
+
 .hamburger {
   display: none;
   flex-direction: column;
@@ -648,6 +651,8 @@ body:not(.form-page-body) {
     padding-bottom: 10px;
   }
 }
+
+/*formulariode login*/
 
 .form-page-body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/libreria.jpg');

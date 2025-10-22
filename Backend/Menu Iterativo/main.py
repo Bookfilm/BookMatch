@@ -1,5 +1,3 @@
-# backend/main.py
-
 from modelos.usuario import Usuario
 from servicios.registro import validar_contraseña
 from vista.menu import MenuPrincipal

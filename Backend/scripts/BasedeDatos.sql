@@ -11,7 +11,7 @@ CREATE TABLE usuario (
     nombre VARCHAR(50),
     apellido VARCHAR(50),
     email VARCHAR(50) UNIQUE,
-    contraseña VARCHAR(255),          -- más largo por hash
+    contraseña VARCHAR(255),          
     fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     id_rol INT NOT NULL,
     CONSTRAINT fk_usuario_rol

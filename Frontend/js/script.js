@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const registroForm = document.getElementById('registroForm');
 
     if (registroForm) {
-        registroForm.addEventListener('submit', (event) => {            event.preventDefault(); 
+        registroForm.addEventListener('submit', (event) => { event.preventDefault(); 
             const nombreInput = document.getElementById('nombre');
             const passwordInput = document.getElementById('password');
             const confirmPasswordInput = document.getElementById('confirmPassword');
@@ -74,11 +74,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const profileInfoDiv = document.getElementById('profile-info');
     const logoutBtn = document.getElementById('logout-btn');
     const loggedInUser = localStorage.getItem('loggedInUser');
-
-    // Esta lógica solo se ejecuta si estamos en la página de perfil
     if (profileInfoDiv && logoutBtn) {
         if (loggedInUser) {
-            // Mostrar datos del usuario
             profileInfoDiv.innerHTML = `
                 <p style="font-size: 1.1rem;"><strong>Nombre de Usuario:</strong> ${loggedInUser}</p>
                 <p style="font-size: 1.1rem;"><strong>Estado:</strong> Conectado</p>
@@ -169,8 +166,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Modal para el botón "Comprar"
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Selecciona todos los botones "Comprar" en la página
     const buyButtons = document.querySelectorAll('.comprar-btn');
     const successModal = document.getElementById('successModal');
     const closeModalBtn = document.querySelector('#successModal .close-button');
@@ -179,8 +176,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (buyButtons.length > 0 && successModal) {
         buyButtons.forEach(button => {
             button.addEventListener('click', (event) => {
-                event.preventDefault(); // Evita cualquier acción por defecto del botón
-                successModal.style.display = 'flex'; // Muestra el modal
+                event.preventDefault();
+                successModal.style.display = 'flex'; 
             });
         });
 
