@@ -1,6 +1,6 @@
 # backend/modelos/usuario.py
 
-from .rol import Rol  # Importa la clase Rol desde el mismo paquete
+from rol import Rol  # Importa la clase Rol desde el mismo paquete
 
 class Usuario:
     usuarios = {

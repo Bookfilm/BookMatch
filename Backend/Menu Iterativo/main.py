@@ -1,6 +1,6 @@
-from modelos.usuario import Usuario
-from servicios.registro import validar_contraseña
-from vista.menu import MenuPrincipal
+from usuario import Usuario
+from registro import validar_contraseña
+from menu import MenuPrincipal
 
 def main():
     menu = MenuPrincipal()

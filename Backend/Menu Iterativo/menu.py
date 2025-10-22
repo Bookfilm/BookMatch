@@ -1,7 +1,7 @@
 # backend/vista/menu.py
 
-from modelos.usuario import Usuario, Rol
-from servicios.registro import validar_contraseña
+from usuario import Usuario, Rol
+from registro import validar_contraseña
 
 class MenuPrincipal:
     def __init__(self):
@@ -66,6 +66,7 @@ class MenuPrincipal:
             break
 
         Usuario.agregar(nombre, contraseña, int(rol))
+        print("")
         print("Usuario registrado con éxito.")
 
     def iniciar_sesion(self):
