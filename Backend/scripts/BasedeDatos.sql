@@ -3,7 +3,7 @@ USE bookmatch;
 
 CREATE TABLE rol (
     rol_id INT PRIMARY KEY AUTO_INCREMENT,
-    rol VARCHAR(50) NOT NULL UNIQUE
+    rol VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE usuario (
@@ -18,11 +18,20 @@ CREATE TABLE usuario (
         FOREIGN KEY (id_rol) REFERENCES rol(rol_id)
 );
 
-CREATE TABLE libro (
+-- Tabla de géneros (categorías) de libros
+CREATE TABLE IF NOT EXISTS genero (
+    genero_id INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(80) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS libro (
     libro_id INT PRIMARY KEY AUTO_INCREMENT,
     titulo VARCHAR(120),
     autor VARCHAR(120),
-    isbn VARCHAR(13) UNIQUE
+    isbn VARCHAR(13) UNIQUE,
+    id_genero INT,
+    CONSTRAINT fk_libro_genero
+        FOREIGN KEY (id_genero) REFERENCES genero(genero_id)
 );
 
 CREATE TABLE compra (

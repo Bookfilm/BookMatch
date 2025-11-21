@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const adminEmail = 'admin@gmail.com';
             const adminPassword = 'admin123';
 
-            if (email === adminEmail && password === adminPassword) {
+            if (email === adminEmail && password === adminPassword) {  
                 localStorage.setItem('loggedInUser', 'Admin');
                 alert('¡Bienvenido, Admin!');
                 window.location.href = 'index.html'; 
